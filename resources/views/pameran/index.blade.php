@@ -16,7 +16,7 @@
 
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo">Pameran Game</a>
+            <a href="#" class="nav__logo">Rpl Exhibition</a>
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
@@ -60,12 +60,12 @@
             <div class="home__container container grid">
                 <div class="home__data">
                     <h1 class="home__title">
-                        Select The Best <br> Quality Breads
+                        Creativity in <br> The Digital Era
                     </h1>
 
-                    <a href="#" class="button">Select Breads</a>
+                    {{-- <a href="#" class="button">Select Games</a> --}}
 
-                    <img src="{{ asset('img/background/console.png') }}" alt="image" class="home__console">
+                    {{-- <img src="{{ asset('img/background/console.png') }}" alt="image" class="home__console"> --}}
                 </div>
 
                 <div class="home__image">
@@ -83,10 +83,10 @@
                             <i class="ri-instagram-line"></i>
                         </a>
                         <a href="" target="_blank">
-                            <i class="ri-instagram-line"></i>
+                            <i class="ri-tiktok-line"></i>
                         </a>
                         <a href="" target="_blank">
-                            <i class="ri-instagram-line"></i>
+                            <i class="ri-threads-line"></i>
                         </a>
                     </div>
                 </footer>
@@ -127,10 +127,195 @@
                 <a href="#" class="new__button button">See More Breads</a>
             </div>
         </section>
+
+        <section class="about section" id="about">
+            <div class="about__container container grid">
+                <div class="about__data">
+                    <h2 class="section__title">About Us</h2>
+
+                    <p class="about__description">
+                        Kami adalah penyelenggara pameran game yang berdedikasi untuk menyatukan komunitas pengembang dan penggemar game melalui platform kami. Kami berusaha untuk mempersembahkan karya-karya terbaru dan inovatif dalam industri hiburan interaktif, menciptakan pengalaman yang menginspirasi dan memperkaya bagi semua yang bergabung dengan kami.
+                    </p>
+
+                    <a href="#" class="button">Know More</a>
+
+                    <img src="{{ asset('img/background/console2.png') }}" alt="image" class="about__poster">
+                </div>
+
+                <img src="{{ asset('img/content/gameposter.jpg') }}" alt="image" class="about__img">
+            </div>
+        </section>
+
+        <section class="favorite section" id="favorite">
+            <h2 class="section__title">Favorite Game</h2>
+
+            <div class="favorite__container container grid">
+                <article class="favorite__card">
+                    <img src="{{ asset('img/game/icongame/coc.png') }}" alt="image" class="favorite__img">
+
+                    <div class="favorite__data">
+                        <h2 class="favorite__title">COC</h2>
+                        <span class="favorite__subtitle">Strategi</span>
+                        <h3 class="favorite__price">Like 52</h3>
+                    </div>
+
+                    <button class="favorite__button button">
+                        <i class="ri-eye-line"></i>
+                    </button>
+                </article>
+
+                <article class="favorite__card">
+                    <img src="{{ asset('img/game/icongame/coc.png') }}" alt="image" class="favorite__img">
+
+                    <div class="favorite__data">
+                        <h2 class="favorite__title">COC</h2>
+                        <span class="favorite__subtitle">Strategi</span>
+                        <h3 class="favorite__price">Like 52</h3>
+                    </div>
+
+                    <button class="favorite__button button">
+                        <i class="ri-eye-line"></i>
+                    </button>
+                </article>
+
+                <article class="favorite__card">
+                    <img src="{{ asset('img/game/icongame/coc.png') }}" alt="image" class="favorite__img">
+
+                    <div class="favorite__data">
+                        <h2 class="favorite__title">COC</h2>
+                        <span class="favorite__subtitle">Strategi</span>
+                        <h3 class="favorite__price">Like 52</h3>
+                    </div>
+
+                    <button class="favorite__button button">
+                        <i class="ri-eye-line"></i>
+                    </button>
+                </article>
+
+                <article class="favorite__card">
+                    <img src="{{ asset('img/game/icongame/coc.png') }}" alt="image" class="favorite__img">
+
+                    <div class="favorite__data">
+                        <h2 class="favorite__title">COC</h2>
+                        <span class="favorite__subtitle">Strategi</span>
+                        <h3 class="favorite__price">Like 52</h3>
+                    </div>
+
+                    <button class="favorite__button button">
+                        <i class="ri-eye-line"></i>
+                    </button>
+                </article>
+
+                <article class="favorite__card">
+                    <img src="{{ asset('img/game/icongame/coc.png') }}" alt="image" class="favorite__img">
+
+                    <div class="favorite__data">
+                        <h2 class="favorite__title">COC</h2>
+                        <span class="favorite__subtitle">Strategi</span>
+                        <h3 class="favorite__price">Like 52</h3>
+                    </div>
+
+                    <button class="favorite__button button">
+                        <i class="ri-eye-line"></i>
+                    </button>
+                </article>
+
+                <article class="favorite__card">
+                    <img src="{{ asset('img/game/icongame/coc.png') }}" alt="image" class="favorite__img">
+
+                    <div class="favorite__data">
+                        <h2 class="favorite__title">COC</h2>
+                        <span class="favorite__subtitle">Strategi</span>
+                        <h3 class="favorite__price">Like 52</h3>
+                    </div>
+
+                    <button class="favorite__button button">
+                        <i class="ri-eye-line"></i>
+                    </button>
+                </article>
+            </div>
+        </section>
+
+        <section class="visit section" id="visit">
+            <div class="visit__container">
+                <img src="{{ asset('img/content/visit.jpeg') }}" alt="image" class="visit__bg">
+                <div class="visit__shadow"></div>
+
+                <div class="visit__content container grid">
+                    <div class="visit__data">
+                        <h2 class="section__title">Visit Us</h2>
+
+                        <p class="visit__description">
+                            Discover the best Games, we look forward to your Visit.
+                        </p>
+
+                        <a href="#" class="button">See Location</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
+        <div class="footer__container container grid">
+            <div>
+                <a href="#" class="footer__logo">Rpl Exhibition</a>
+                <p class="footer__description">
+                    We make the best Game <br> in the Digital Era.
+                </p>
+            </div>
 
+            <div class="footer__content grid">
+                <div>
+                    <h3 class="footer__title">Address</h3>
+                    
+                    <ul class="footer__list">
+                        <li>
+                            <address class="footer__info">SMK N 1 Purwokerto</address>
+                        </li>
+                        
+                        <li>
+                            <address class="footer__info">08.00 - 15.00</address>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer__title">Contact</h3>
+                    
+                    <ul class="footer__list">
+                        <li>
+                            <address class="footer__info">rplexhibition@gmail.com</address>
+                        </li>
+
+                        <li>
+                            <address class="footer__info">083104788904</address>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer__title"></h3>
+                    
+                    <div class="footer__social">
+                        <a href="" target="_blank">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="" target="_blank">
+                            <i class="ri-tiktok-line"></i>
+                        </a>
+                        <a href="" target="_blank">
+                            <i class="ri-threads-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <img src="{{ asset('img/background/console2.png') }}" alt="image" class="footer__img-1">
+            <img src="{{ asset('img/content/Tujuan.png') }}" alt="image" class="footer__img-2">
+        </div>
+        <span class="footer__copy">
+            &#169; Copy Rights By Rpl Exhibition 2024
+        </span>
     </footer>
 
     <script src="{{ asset('javascript/index/main.js') }}"></script>
