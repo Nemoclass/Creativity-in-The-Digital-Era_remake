@@ -21,19 +21,19 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#home" class="nav__link">Home</a>
+                        <a href="#home" class="nav__link active-link">Home</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#news" class="nav__link">News</a>
+                        <a href="#new" class="nav__link">News</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#aboutus" class="nav__link">About us</a>
+                        <a href="#about" class="nav__link">About us</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#favorites" class="nav__link">Favorites</a>
+                        <a href="#favorite" class="nav__link">Games</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#location" class="nav__link">Location</a>
+                        <a href="#visit" class="nav__link">Exhibition</a>
                     </li>
                 </ul>
 
@@ -243,13 +243,13 @@
 
                 <div class="visit__content container grid">
                     <div class="visit__data">
-                        <h2 class="section__title">Visit Us</h2>
+                        <h2 class="section__title">Future Game</h2>
 
                         <p class="visit__description">
-                            Discover the best Games, we look forward to your Visit.
+                            Find the best games, we look forward to your visit to the RPL GAMES EXHIBITION.
                         </p>
 
-                        <a href="#" class="button">See Location</a>
+                        {{-- <a href="#" class="button">See Location</a> --}}
                     </div>
                 </div>
             </div>
@@ -268,35 +268,35 @@
             <div class="footer__content grid">
                 <div>
                     <h3 class="footer__title">Address</h3>
-                    
+
                     <ul class="footer__list">
                         <li>
                             <address class="footer__info">SMK N 1 Purwokerto</address>
                         </li>
-                        
+
                         <li>
-                            <address class="footer__info">08.00 - 15.00</address>
+                            <address class="footer__info">COMING SOON</address>
                         </li>
                     </ul>
                 </div>
 
                 <div>
                     <h3 class="footer__title">Contact</h3>
-                    
+
                     <ul class="footer__list">
                         <li>
                             <address class="footer__info">rplexhibition@gmail.com</address>
                         </li>
 
                         <li>
-                            <address class="footer__info">083104788904</address>
+                            <address class="footer__info">XII RPL 1 | XII RPL 2</address>
                         </li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3 class="footer__title"></h3>
-                    
+                    <h3 class="footer__title">Follow </h3>
+
                     <div class="footer__social">
                         <a href="" target="_blank">
                             <i class="ri-instagram-line"></i>
@@ -318,6 +318,14 @@
         </span>
     </footer>
 
+    {{-- scroll up --}}
+    <a href="#" class="scrollup" id="scroll-up"><i class="ri-arrow-up-line"></i></a>
+
+
+    {{-- scroll reveall --}}
+    <script src="{{ asset('javascript/index/scrollreveal.min.js') }}"></script>
+
+    {{-- script --}}
     <script src="{{ asset('javascript/index/main.js') }}"></script>
 </body>
 </html>
