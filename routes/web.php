@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/pamerangame', [PameranController::class, 'index'])->name('index');
+Route::get('/', [PameranController::class, 'index'])->name('index');
