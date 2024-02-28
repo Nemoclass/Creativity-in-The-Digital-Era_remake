@@ -14,9 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-<<<<<<< HEAD
-Route::get('/pamerangame', [PameranController::class, 'index'])->name('index');
 Route::get('/', [PameranController::class, 'index'])->name('index');
-=======
 Route::get('/rplexhibition', [PameranController::class, 'index'])->name('index');
->>>>>>> 9ee4399b54247739779d3c952ec42cd36ac16a8d
+Route::get('/games', [PameranController::class, 'game'])->name('game');

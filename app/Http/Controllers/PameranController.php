@@ -9,4 +9,8 @@ class PameranController extends Controller
     public function index(){
         return view('pameran.index');
     }
+
+    public function game(){
+        return view('pameran.game.index');
+    }
 }

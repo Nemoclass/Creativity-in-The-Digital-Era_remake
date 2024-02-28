@@ -151,7 +151,35 @@
 
             <div class="favorite__container container grid">
                 <article class="favorite__card">
+                    <img src="{{ asset('img/game/icongame/dinorunicongame.png') }}" alt="image" class="favorite__img">
+
+                    <div class="favorite__data">
+                        <h2 class="favorite__title">COC</h2>
+                        <span class="favorite__subtitle">Strategi</span>
+                        <h3 class="favorite__price">Like 52</h3>
+                    </div>
+
+                    <button class="favorite__button button">
+                        <a href="{{ route('game') }}"><i class="ri-eye-line"></i></a>
+                    </button>
+                </article>
+
+                <article class="favorite__card">
                     <img src="{{ asset('img/game/icongame/coc.png') }}" alt="image" class="favorite__img">
+
+                    <div class="favorite__data">
+                        <h2 class="favorite__title">COC</h2>
+                        <span class="favorite__subtitle">Strategi</span>
+                        <h3 class="favorite__price">Like 52</h3>
+                    </div>
+
+                    <button class="favorite__button button">
+                        <i class="ri-eye-line"></i>
+                    </button>
+                </article>
+
+                <article class="favorite__card">
+                    <img src="{{ asset('img/game/icongame/dinorunicongame.png') }}" alt="image" class="favorite__img">
 
                     <div class="favorite__data">
                         <h2 class="favorite__title">COC</h2>
@@ -179,35 +207,7 @@
                 </article>
 
                 <article class="favorite__card">
-                    <img src="{{ asset('img/game/icongame/coc.png') }}" alt="image" class="favorite__img">
-
-                    <div class="favorite__data">
-                        <h2 class="favorite__title">COC</h2>
-                        <span class="favorite__subtitle">Strategi</span>
-                        <h3 class="favorite__price">Like 52</h3>
-                    </div>
-
-                    <button class="favorite__button button">
-                        <i class="ri-eye-line"></i>
-                    </button>
-                </article>
-
-                <article class="favorite__card">
-                    <img src="{{ asset('img/game/icongame/coc.png') }}" alt="image" class="favorite__img">
-
-                    <div class="favorite__data">
-                        <h2 class="favorite__title">COC</h2>
-                        <span class="favorite__subtitle">Strategi</span>
-                        <h3 class="favorite__price">Like 52</h3>
-                    </div>
-
-                    <button class="favorite__button button">
-                        <i class="ri-eye-line"></i>
-                    </button>
-                </article>
-
-                <article class="favorite__card">
-                    <img src="{{ asset('img/game/icongame/coc.png') }}" alt="image" class="favorite__img">
+                    <img src="{{ asset('img/game/icongame/dinorunicongame.png') }}" alt="image" class="favorite__img">
 
                     <div class="favorite__data">
                         <h2 class="favorite__title">COC</h2>
