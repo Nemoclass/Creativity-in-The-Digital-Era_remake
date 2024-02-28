@@ -65,16 +65,17 @@
                 </div>
             </div>
         </div>
-        <a href="" class="play" onclick="toggleVideo();"><i class="ri-play-circle-line"></i>Play Tutorial</a>
+        {{-- <a href="#" class="play" onclick="toggleVideo()"><i class="ri-play-circle-line"></i>Play Tutorial</a> --}}
+        <span class="play" onclick="toggleVideo()"><i class="ri-play-circle-line"></i>Play Tutorial</span>
         {{-- <ul class="sci">
             <li><a href="#"><i class="ri-instagram-line"></i></a></li>
             <li><a href="#"><i class="ri-tiktok-line"></i></a></li>
             <li><a href="#"><i class="ri-threads-line"></i></a></li>
         </ul> --}}
     </div>
-    <div class="trailer active">
-        <video src="{{ asset('video/game/dinorun.mp4') }}" controls="true" autoplay="true"></video>
-        <img class="close" src="{{ asset('img/content/close-circle-line.png') }}" onclick="toggleVideo();" alt="">
+    <div class="trailer">
+        <video src="{{ asset('video/game/dinorun.mp4') }}" controls="true"></video>
+        <img class="close" src="{{ asset('img/content/close-circle-line.png') }}" onclick="toggleVideo()" alt="">
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
