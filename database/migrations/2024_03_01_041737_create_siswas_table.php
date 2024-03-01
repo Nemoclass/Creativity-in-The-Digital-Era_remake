@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGamesTable extends Migration
+class CreateSiswasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,11 @@ class CreateGamesTable extends Migration
      */
     public function up()
     {
-        Schema::create('games', function (Blueprint $table) {
+        Schema::create('siswas', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('logo_icon');
-            $table->string('video_demo');
-            $table->string('logo_text');
-            $table->text('desc');
-            $table->string('ss1');
-            $table->string('ss2');
-            $table->string('ss3');
-            $table->string('ss4');
-            $table->string('ss5');
+            $table->string('nama_siswa');
+            $table->string('foto_siswa');
+            $table->string('tugas');
             $table->unsignedBigInteger('team_id');
             $table->foreign('team_id')->references('id')->on('teams')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
@@ -38,6 +31,6 @@ class CreateGamesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('games');
+        Schema::dropIfExists('siswas');
     }
 }

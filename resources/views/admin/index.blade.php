@@ -35,6 +35,7 @@
     <div class="container pt-3">
         <button class="btn btn-primary" onclick="tampilFormGame()"><a class="nav-link disabled" href="">Tambah game +</a></button>
         <button class="btn btn-info" onclick="tampilFormSiswa()"><a class="nav-link disabled" href="">Tambah siswa +</a></button>
+        <button class="btn btn-warning" onclick="tampilFormTeam()"><a class="nav-link disabled" href="">Tambah team +</a></button>
         <div class="row mt-3 d-none" id="form-game">
             <h3 class="border-bottom pb-2">Tambah Data Game</h3>
             <div class="row mx-auto">
@@ -119,13 +120,18 @@
               
             </div>
             <div class="col-lg-8">
-              <form action="" method="post">
-                   <select class="form-select" aria-label="Default select example">
-                      <option selected>Pilih Tim</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
+              <form action="{{ route('admin-store-siswa') }}" method="post" enctype="multipart/form-data">
+                @csrf
+                   <select class="form-select" aria-label="Default select example" name="team_id">
+                        <option selected>Pilih Tim</option>
+                      @foreach ($team as $t)
+                        <option value="{{ $t->id }}">{{ $t->nama_team }}</option>
+                      @endforeach
                   </select>
+                    <div class="mb-3">
+                        <label for="nama_siswa" class="form-label">Nama Siswa</label>
+                        <input type="text" name="nama_siswa" class="form-control" id="nama_siswa">
+                    </div>
                     <div class="mb-3">
                         <label for="foto_siswa" class="form-label">Foto Siswa</label>
                         <input type="file" name="foto_siswa" class="form-control" id="foto_siswa">
@@ -139,20 +145,41 @@
             </div>
           </div>
         </div>
+        <div class="row mt-3 d-none" id="form-team">
+          <h3 class="border-bottom pb-2">Tambah Data Team</h3>
+          <div class="row col-lg-12 mx-auto">
+              <form action="{{ route('admin-store-team') }}" method="post">
+                @csrf
+                  <div class="mb-3">
+                        <label for="team" class="form-label">Nama Team</label>
+                        <input type="text" name="nama_team" class="form-control" id="team">
+                    </div>
+                    <button class="btn btn-success d-block ms-auto">Kirim</button>
+              </form>
+          </div>
+        </div>
     </div>
     <script src="{{ asset('admin/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('admin/jquery3.4.6.js') }}"></script>
     <script>
       const game = document.getElementById("form-game")
       const siswa = document.getElementById("form-siswa")
+      const team = document.getElementById("form-team")
 
       function tampilFormGame(){
         game.classList.remove("d-none")
         siswa.classList.add("d-none")
+        team.classList.add("d-none")
       }
       function tampilFormSiswa(){
         siswa.classList.remove("d-none")
         game.classList.add("d-none")
+        team.classList.add("d-none")
+      }
+      function tampilFormTeam(){
+        team.classList.remove("d-none")
+        game.classList.add("d-none")
+        siswa.classList.add("d-none")
       }
       $(document).ready(function(){
             $('#foto_siswa').on('change', function(){

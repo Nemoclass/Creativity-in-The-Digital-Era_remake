@@ -6,7 +6,7 @@ use App\Models\Team;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Game extends Model
+class Siswa extends Model
 {
     use HasFactory;
     protected $guarded = [];
@@ -15,5 +15,4 @@ class Game extends Model
         
         return $this->belongsTo(Team::class, 'team_id', 'id');
     }
-
 }

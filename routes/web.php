@@ -21,4 +21,6 @@ Route::get('/games', [PameranController::class, 'game'])->name('game');
 Route::prefix('admin')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'index'])->name('admin-index');
     Route::post('/store-game', [AdminController::class, 'store__game'])->name('admin-store-game');
+    Route::post('/store-team', [AdminController::class, 'store__team'])->name('admin-store-team');
+    Route::post('/store-siswa', [AdminController::class, 'store__siswa'])->name('admin-store-siswa');
 });
