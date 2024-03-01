@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PameranController;
 
 /*
@@ -15,6 +16,8 @@ use App\Http\Controllers\PameranController;
 |
 */
 
+Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::get('/register', [AuthController::class, 'register'])->name('register');
 Route::get('/', [PameranController::class, 'index'])->name('index');
 Route::get('/rplexhibition', [PameranController::class, 'index'])->name('index');
 Route::get('/games/{id}', [PameranController::class, 'game'])->name('game');

@@ -35,6 +35,9 @@
                     <li class="nav__item">
                         <a href="#visit" class="nav__link">Exhibition</a>
                     </li>
+                    <li class="nav__item">
+                        <a href="{{ route('login') }}" class="nav__link">Login</a>
+                    </li>
                 </ul>
 
                 <div class="nav__close" id="nav-close">
