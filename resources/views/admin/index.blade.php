@@ -142,6 +142,13 @@
                         <label for="tugas" class="form-label">Tugas dalam tim</label>
                         <input type="text" name="tugas" class="form-control" id="tugas">
                     </div>
+                    <div class="mb-3">
+                      <select class="form-select" aria-label="Default select example" name="kelas">
+                        <option selected>Kelas</option>
+                        <option value="XII RPL 1">XII RPL 1</option>
+                        <option value="XII RPL 2">XII RPL 2</option>
+                      </select>
+                    </div>
                     <button class="btn btn-success d-block ms-auto">Kirim</button>
               </form>
             </div>
@@ -163,30 +170,24 @@
         <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Nama Game</th>
+      <th scope="col">Team</th>
+      <th scope="col">Screenshoot</th>
+      <th scope="col">Deskripsi</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+    @foreach ($game as $g)
+      <tr>
+        <th scope="row">{{ $g->title }}</th>
+        <td>{{ $g->team->nama_team }}</td>
+        <td><img src="{{ asset('storage/'.$g->ss1) }}" alt="" srcset="" width="200px"></td>
+        <td style="max-width: 180px">{{ $g->desc }}</td>
+        <td>
+          Edit | Hapus
+        </td>
+      </tr>
+    @endforeach
   </tbody>
 </table>
     </div>

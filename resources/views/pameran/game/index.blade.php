@@ -32,7 +32,6 @@
             <i class="ri-search-line"></i>
         </div>
     </header> --}}
-
     <div class="banner" style="background: url({{ asset('storage/'.$game->ss1) }}) no-repeat;">
         <div class="content active">
             <img src="{{ asset('storage/'.$game->logo_text) }}" alt="image" class="movie-title">
@@ -44,11 +43,17 @@
                 {{ $game->desc }}
             </p>
             <div class="button">
-                <a href=""><i class="ri-google-play-line"></i>Download Games</a>
-                <a href=""><i class="ri-heart-line"></i> | <i class="ri-heart-fill"></i> Like</a>
-                <a href="{{ route('index') }}">Kembali</a>
+                <div class="download">
+                    <a href=""><i class="ri-google-play-line"></i>Download Games</a>
+                </div>
+                <div class="like">
+                    <a href=""><i class="ri-heart-line"></i> | <i class="ri-heart-fill"></i> Like</a>
+                    <a href="{{ route('index') }}">Kembali</a>
+                </div>
             </div>
         </div>
+
+
         <div class="carousel-box">
             <div class="carousel">
                 <div class="carousel-item">
@@ -68,6 +73,8 @@
                 </div>
             </div>
         </div>
+</div>
+
         {{-- <a href="#" class="play" onclick="toggleVideo()"><i class="ri-play-circle-line"></i>Play Tutorial</a> --}}
         <span class="play" onclick="toggleVideo()"><i class="ri-play-circle-line"></i>Play Tutorial</span>
         {{-- <ul class="sci">
@@ -75,7 +82,6 @@
             <li><a href="#"><i class="ri-tiktok-line"></i></a></li>
             <li><a href="#"><i class="ri-threads-line"></i></a></li>
         </ul> --}}
-    </div>
     <div class="trailer">
         <video src="{{ asset('storage/'.$game->video_demo) }}" controls="true"></video>
         <img class="close" src="{{ asset('img/content/close-circle-line.png') }}" onclick="toggleVideo()" alt="">

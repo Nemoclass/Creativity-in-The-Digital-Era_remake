@@ -104,6 +104,7 @@ header{
     background-position: center;
     overflow: hidden;
     transition: 0.5s;
+    flex-direction: row;
 }
 
 .banner::before{
@@ -230,9 +231,10 @@ header{
 }
 
 .play{
-    position: absolute;
-    bottom: 50px;
-    left: 100px;
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     display: inline-flex;
     justify-content: flex-start;
     align-items: center;
@@ -317,4 +319,27 @@ header{
     max-width: 30px;
 }
 
+.button{
+    display: flex;
+    flex-direction: row;
+}
+@media screen and (max-width: 1024px) {
+    .banner{
+        flex-direction: column;
+    }
 
+    .button{
+        flex-direction: column;
+        text-align: center;
+    }
+    .download{
+        margin-bottom: 10px;
+    }
+    .like{
+        margin-bottom: 10px;
+
+    }
+    .banner .content h4 span{
+        font-size: 1rem;
+    }
+}

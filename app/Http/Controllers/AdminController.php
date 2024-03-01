@@ -10,8 +10,9 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     public function index(){
-        $game = Game::all();
+        $game = Game::with('team')->get();
         $team = Team::all();
+        
 
         return view('admin.index', compact('game','team'));
     }

@@ -17,6 +17,7 @@ class CreateSiswasTable extends Migration
             $table->id();
             $table->string('nama_siswa');
             $table->string('foto_siswa');
+            $table->string('kelas');
             $table->string('tugas');
             $table->unsignedBigInteger('team_id');
             $table->foreign('team_id')->references('id')->on('teams')->onUpdate('cascade')->onDelete('cascade');
