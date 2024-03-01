@@ -151,16 +151,16 @@
 
             <div class="favorite__container container grid">
                 @foreach ($game as $g)
-                    
+
                 <article class="favorite__card">
                     <img src="{{ asset('storage/'.$g->logo_icon) }}" alt="image" class="favorite__img">
-                    
+
                     <div class="favorite__data">
                         <h2 class="favorite__title">{{ $g->title }}</h2>
                         <span class="favorite__subtitle">{{ $g->team->nama_team }}</span>
                         <h3 class="favorite__price">Like 52</h3>
                     </div>
-                    
+
                     <button class="favorite__button button">
                         <a href="{{ route('game', ['id' => $g->id]) }}"><i class="ri-eye-line"></i></a>
                     </button>
@@ -198,7 +198,8 @@
                         <div class="content">
                             <h4>{{ $s->nama_siswa }}</h4>
                             <div class="info" style="margin-bottom: 20px;">
-                                <p>XII RPL 1 <br> <span>{{ $s->team->nama_team }}</span></p>
+                                <p>Kelas <br> <span>{{ $s->team->nama_team }}</span></p>
+                                <p>Team <br> <span>{{ $s->team->nama_team }}</span></p>
                                 {{-- <a href="game/DinoRun.html">Lihat</a> --}}
                             </div>
                             <div class="progress-line">
