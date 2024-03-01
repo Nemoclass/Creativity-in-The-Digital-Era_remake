@@ -258,7 +258,7 @@
         {{-- siswa --}}
         <div class="container games">
             <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
-                <div class="row justify-content-center col-xl-4 col-12 col-sm-6 col-md-6">
+                <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
                     <div class="card" >
                         <img src="{{ asset('img/siswa/vindra.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
                         <div class="content">
@@ -273,7 +273,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center col-xl-4 col-12 col-sm-6 col-md-6">
+                <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
                     <div class="card" >
                         <img src="{{ asset('img/siswa/atha.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
                         <div class="content">
@@ -288,7 +288,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center col-xl-4 col-12 col-sm-6 col-md-6">
+                <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
                     <div class="card" >
                         <img src="{{ asset('img/siswa/aura.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
                         <div class="content">
@@ -303,7 +303,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center col-xl-4 col-12 col-sm-6 col-md-6">
+                <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
                     <div class="card" >
                         <img src="{{ asset('img/siswa/bagus.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
                         <div class="content">
@@ -318,7 +318,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center col-xl-4 col-12 col-sm-6 col-md-6">
+                <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
                     <div class="card" >
                         <img src="{{ asset('img/siswa/hadaya.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
                         <div class="content">
@@ -333,7 +333,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center col-xl-4 col-12 col-sm-6 col-md-6">
+                <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
                     <div class="card" >
                         <img src="{{ asset('img/siswa/feliza.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
                         <div class="content">
@@ -348,7 +348,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center col-xl-4 col-12 col-sm-6 col-md-6">
+                <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
                     <div class="card" >
                         <img src="{{ asset('img/siswa/fenda.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
                         <div class="content">
@@ -363,7 +363,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center col-xl-4 col-12 col-sm-6 col-md-6">
+                <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
                     <div class="card" >
                         <img src="{{ asset('img/siswa/duiki.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
                         <div class="content">
@@ -378,7 +378,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center col-xl-4 col-12 col-sm-6 col-md-6">
+                <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
                     <div class="card" >
                         <img src="{{ asset('img/siswa/fayza.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
                         <div class="content">
@@ -393,7 +393,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center col-xl-4 col-12 col-sm-6 col-md-6">
+                <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
                     <div class="card" >
                         <img src="{{ asset('img/siswa/bagas.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
                         <div class="content">
@@ -408,7 +408,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center col-xl-4 col-12 col-sm-6 col-md-6">
+                <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
                     <div class="card" >
                         <img src="{{ asset('img/siswa/julian.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
                         <div class="content">
@@ -423,7 +423,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center col-xl-4 col-12 col-sm-6 col-md-6">
+                <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
                     <div class="card" >
                         <img src="{{ asset('img/siswa/kaiza.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
                         <div class="content">
@@ -438,7 +438,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row justify-content-center col-xl-4 col-12 col-sm-6 col-md-6">
+                <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
                     <div class="card" >
                         <img src="{{ asset('img/siswa/naufal.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
                         <div class="content">

@@ -516,6 +516,13 @@ img{
     margin: 20px 40px;
     background: #1b2141;
     overflow: hidden;
+    transition: border-color .4s;
+    cursor: pointer;
+}
+
+.games .cardBx .card:hover{
+    transform: scale(1.02);
+    border-color: #1aeeef;
 }
 
 .games .cardBx .card img{
@@ -723,7 +730,48 @@ img{
 }
 
 /* Responsive */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 340px) {
+    .container{
+        margin-inline: 1rem;
+    }
+    .main{
+        width: 100%;
+    }
+    .home__title{
+        font-size: 2.5rem;
+    }
+
+    .home__footer{
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+
+    .new__content{
+        grid-template-columns: 200px;
+        justify-content: center;
+    }
+
+    .new__card{
+        flex-direction: column;
+        row-gap: 1rem;
+        text-align: center;
+    }
+
+    .new__card:nth-child(2) img{
+        order: initial;
+    }
+
+    .favorite__container{
+        grid-template-columns: 180px;
+        justify-content: center;
+    }
+
+    .footer__content{
+        grid-template-columns: max-content;
+    }
+}
+
+@media screen and (max-width: 450px) {
     .container{
         margin-inline: 1rem;
     }
