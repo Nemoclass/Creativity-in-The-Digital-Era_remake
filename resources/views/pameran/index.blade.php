@@ -198,7 +198,7 @@
                         <div class="content">
                             <h4>{{ $s->nama_siswa }}</h4>
                             <div class="info" style="margin-bottom: 20px;">
-                                <p>Kelas <br> <span>{{ $s->team->nama_team }}</span></p>
+                                <p>Kelas <br> <span>{{ $s->kelas }}</span></p>
                                 <p>Team <br> <span>{{ $s->team->nama_team }}</span></p>
                                 {{-- <a href="game/DinoRun.html">Lihat</a> --}}
                             </div>

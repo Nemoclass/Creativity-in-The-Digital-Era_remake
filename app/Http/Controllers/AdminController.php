@@ -12,8 +12,12 @@ class AdminController extends Controller
     public function index(){
         $game = Game::with('team')->get();
         $team = Team::all();
+<<<<<<< HEAD
         $siswa = Siswa::with('team')->get();
         
+=======
+
+>>>>>>> 548bf00ba4dc685e4bd6ffc47620a819f0ccc904
 
         return view('admin.index', compact('game','team','siswa'));
     }
@@ -55,6 +59,7 @@ class AdminController extends Controller
             'nama_siswa' => $request->nama_siswa,
             'foto_siswa' => $pathSiswa,
             'tugas' => $request->tugas,
+            'kelas' => $request->kelas,
             'team_id' => $request->team_id,
         ]);
         return back();
