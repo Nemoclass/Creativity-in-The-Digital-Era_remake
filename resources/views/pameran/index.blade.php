@@ -54,7 +54,7 @@
 
     <main class="main">
         <section class="home section" id="home">
-            <img src="{{ asset('img/background/background.jpeg') }}" alt="image" class="home__bg">
+            <img src="{{ asset('img/game/ingame/game1.jpg') }}" alt="image" class="home__bg">
             <div class="home__shadow"></div>
 
             <div class="home__container container grid">
@@ -254,6 +254,207 @@
                 </div>
             </div>
         </section>
+
+        {{-- siswa --}}
+        <div class="container games">
+            <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
+                <div class="row justify-content-center col-xl-4 col-12 col-sm-6 col-md-6">
+                    <div class="card" >
+                        <img src="{{ asset('img/siswa/vindra.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                        <div class="content">
+                            <h4>Vindra Arya Yulian</h4>
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p>XII RPL 1 <br> <span>Gedang</span></p>
+                                {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                            </div>
+                            <div class="progress-line">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center col-xl-4 col-12 col-sm-6 col-md-6">
+                    <div class="card" >
+                        <img src="{{ asset('img/siswa/atha.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                        <div class="content">
+                            <h4>Atha Muyassar</h4>
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p>XII RPL 1 <br> <span>Gedang</span></p>
+                                {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                            </div>
+                            <div class="progress-line">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center col-xl-4 col-12 col-sm-6 col-md-6">
+                    <div class="card" >
+                        <img src="{{ asset('img/siswa/aura.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                        <div class="content">
+                            <h4>Aura Nabila Mega</h4>
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p>XII RPL 1 <br> <span>Gedang</span></p>
+                                {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                            </div>
+                            <div class="progress-line">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center col-xl-4 col-12 col-sm-6 col-md-6">
+                    <div class="card" >
+                        <img src="{{ asset('img/siswa/bagus.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                        <div class="content">
+                            <h4>Rizqy Bagus Saputra</h4>
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p>XII RPL 1 <br> <span>Gedang</span></p>
+                                {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                            </div>
+                            <div class="progress-line">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center col-xl-4 col-12 col-sm-6 col-md-6">
+                    <div class="card" >
+                        <img src="{{ asset('img/siswa/hadaya.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                        <div class="content">
+                            <h4>Hadaya Imtyaza Syarifa</h4>
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p>XII RPL 1 <br> <span>Gedang</span></p>
+                                {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                            </div>
+                            <div class="progress-line">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center col-xl-4 col-12 col-sm-6 col-md-6">
+                    <div class="card" >
+                        <img src="{{ asset('img/siswa/feliza.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                        <div class="content">
+                            <h4>Feliza Anindya Rahma Putri</h4>
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p>XII RPL 1 <br> <span>Gedang</span></p>
+                                {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                            </div>
+                            <div class="progress-line">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center col-xl-4 col-12 col-sm-6 col-md-6">
+                    <div class="card" >
+                        <img src="{{ asset('img/siswa/fenda.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                        <div class="content">
+                            <h4>Fenda Revalina Keisya Nugroho</h4>
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p>XII RPL 1 <br> <span>Gedang</span></p>
+                                {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                            </div>
+                            <div class="progress-line">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center col-xl-4 col-12 col-sm-6 col-md-6">
+                    <div class="card" >
+                        <img src="{{ asset('img/siswa/duiki.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                        <div class="content">
+                            <h4>Duiki Arbiyan</h4>
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p>XII RPL 1 <br> <span>Gedang</span></p>
+                                {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                            </div>
+                            <div class="progress-line">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center col-xl-4 col-12 col-sm-6 col-md-6">
+                    <div class="card" >
+                        <img src="{{ asset('img/siswa/fayza.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                        <div class="content">
+                            <h4>Fayza Sekar Ningtyas</h4>
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p>XII RPL 1 <br> <span>Gedang</span></p>
+                                {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                            </div>
+                            <div class="progress-line">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center col-xl-4 col-12 col-sm-6 col-md-6">
+                    <div class="card" >
+                        <img src="{{ asset('img/siswa/bagas.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                        <div class="content">
+                            <h4>Bagas Alfanto</h4>
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p>XII RPL 1 <br> <span>Gedang</span></p>
+                                {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                            </div>
+                            <div class="progress-line">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center col-xl-4 col-12 col-sm-6 col-md-6">
+                    <div class="card" >
+                        <img src="{{ asset('img/siswa/julian.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                        <div class="content">
+                            <h4>Julian Saputra</h4>
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p>XII RPL 1 <br> <span>Gedang</span></p>
+                                {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                            </div>
+                            <div class="progress-line">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center col-xl-4 col-12 col-sm-6 col-md-6">
+                    <div class="card" >
+                        <img src="{{ asset('img/siswa/kaiza.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                        <div class="content">
+                            <h4>Kaizaku Setiawan</h4>
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p>XII RPL 1 <br> <span>Gedang</span></p>
+                                {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                            </div>
+                            <div class="progress-line">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center col-xl-4 col-12 col-sm-6 col-md-6">
+                    <div class="card" >
+                        <img src="{{ asset('img/siswa/naufal.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                        <div class="content">
+                            <h4>Naufal Haidar Azhar</h4>
+                            <div class="info" style="margin-bottom: 20px;">
+                                <p>XII RPL 1 <br> <span>Gedang</span></p>
+                                {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                            </div>
+                            <div class="progress-line">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
