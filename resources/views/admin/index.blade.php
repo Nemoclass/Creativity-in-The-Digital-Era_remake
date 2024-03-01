@@ -114,6 +114,35 @@
                     <button class="btn btn-success d-block ms-auto">Kirim</button>
                 </form>
             </div>
+            <table class="table pt-5">
+              <h3>Data Game</h3>
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th scope="col">Nama Game</th>
+                    <th scope="col">Team</th>
+                    <th scope="col">Screenshoot</th>
+                    <th scope="col">Deskripsi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @php
+                    $no = 1;
+                  @endphp
+                  @foreach ($game as $g)
+                    <tr>
+                      <th>{{ $no++ }}</th>
+                      <th scope="row">{{ $g->title }}</th>
+                      <td>{{ $g->team->nama_team }}</td>
+                      <td><img src="{{ asset('storage/'.$g->ss1) }}" alt="" srcset="" width="200px"></td>
+                      <td style="max-width: 180px">{{ $g->desc }}</td>
+                      <td>
+                        Edit | Hapus
+                      </td>
+                    </tr>
+                  @endforeach
+                </tbody>
+              </table>
         </div>
         <div class="row mt-3 d-none" id="form-siswa">
           <h3 class="border-bottom pb-2">Tambah Data Siswa</h3>
@@ -152,6 +181,35 @@
                     <button class="btn btn-success d-block ms-auto">Kirim</button>
               </form>
             </div>
+            <table class="table pt-5">
+              <h3>Data Siswa</h3>
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th scope="col">Nama Game</th>
+                    <th scope="col">Team</th>
+                    <th scope="col">Screenshoot</th>
+                    <th scope="col">Deskripsi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @php
+                    $no = 1;
+                  @endphp
+                  @foreach ($siswa as $s)
+                    <tr>
+                      <th>{{ $no++ }}</th>
+                      <th scope="row">{{ $s->nama_siswa }}</th>
+                      <td>{{ $s->team->kelas }}</td>
+                      <td><img src="{{ asset('storage/'.$g->foto_siswa) }}" alt="" srcset="" width="200px"></td>
+                      <td style="max-width: 180px">{{ $g->team->nama_team }}</td>
+                      <td>
+                        Edit | Hapus
+                      </td>
+                    </tr>
+                  @endforeach
+                </tbody>
+              </table>
           </div>
         </div>
         <div class="row mt-3 d-none" id="form-team">
@@ -167,29 +225,6 @@
               </form>
           </div>
         </div>
-        <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Nama Game</th>
-      <th scope="col">Team</th>
-      <th scope="col">Screenshoot</th>
-      <th scope="col">Deskripsi</th>
-    </tr>
-  </thead>
-  <tbody>
-    @foreach ($game as $g)
-      <tr>
-        <th scope="row">{{ $g->title }}</th>
-        <td>{{ $g->team->nama_team }}</td>
-        <td><img src="{{ asset('storage/'.$g->ss1) }}" alt="" srcset="" width="200px"></td>
-        <td style="max-width: 180px">{{ $g->desc }}</td>
-        <td>
-          Edit | Hapus
-        </td>
-      </tr>
-    @endforeach
-  </tbody>
-</table>
     </div>
     <script src="{{ asset('admin/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('admin/jquery3.4.6.js') }}"></script>

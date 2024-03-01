@@ -12,9 +12,10 @@ class AdminController extends Controller
     public function index(){
         $game = Game::with('team')->get();
         $team = Team::all();
+        $siswa = Siswa::with('team')->get();
         
 
-        return view('admin.index', compact('game','team'));
+        return view('admin.index', compact('game','team','siswa'));
     }
 
     public function store__game(Request $request){
