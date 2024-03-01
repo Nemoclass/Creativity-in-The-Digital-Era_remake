@@ -36,7 +36,7 @@ class AdminController extends Controller
             'ss3' => $pathSs3,
             'ss4' => $pathSs4,
             'ss5' => $pathSs5,
-            'team' => $request->team,
+            'team_id' => $request->team_id,
 
         ]);
         return back();

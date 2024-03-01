@@ -103,10 +103,12 @@
                             </div>
                       </div>
                       <div class="col-lg-8">
-                        <div class="input-group mb-3">
-                          <label for="team" class="input-group-text">Nama Tim</label>
-                          <input type="text" name="team" class="form-control" id="team" placeholder="Nama Tim">
-                        </div>
+                        <select class="form-select" aria-label="Default select example" name="team_id">
+                        <option selected>Pilih Tim</option>
+                        @foreach ($team as $t)
+                          <option value="{{ $t->id }}">{{ $t->nama_team }}</option>
+                        @endforeach
+                  </select>
                       </div>
                     </div>
                     <button class="btn btn-success d-block ms-auto">Kirim</button>
@@ -230,3 +232,4 @@
     </script>
   </body>
 </html>
+

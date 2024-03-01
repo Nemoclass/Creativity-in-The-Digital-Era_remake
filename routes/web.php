@@ -17,7 +17,7 @@ use App\Http\Controllers\PameranController;
 
 Route::get('/', [PameranController::class, 'index'])->name('index');
 Route::get('/rplexhibition', [PameranController::class, 'index'])->name('index');
-Route::get('/games', [PameranController::class, 'game'])->name('game');
+Route::get('/games/{id}', [PameranController::class, 'game'])->name('game');
 Route::prefix('admin')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'index'])->name('admin-index');
     Route::post('/store-game', [AdminController::class, 'store__game'])->name('admin-store-game');

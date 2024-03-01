@@ -33,15 +33,15 @@
         </div>
     </header> --}}
 
-    <div class="banner">
+    <div class="banner" style="background: url({{ asset('storage/'.$game->ss1) }}) no-repeat;">
         <div class="content active">
-            <img src="{{ asset('img/game/icon/dinorun.png') }}" alt="image" class="movie-title">
+            <img src="{{ asset('storage/'.$game->logo_text) }}" alt="image" class="movie-title">
             <h4>
                 <span>Petualangan</span>
                 <span>Advanture</span><span>Kidz</span>
             </h4>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nobis laborum voluptatem, nisi excepturi ea, suscipit repellat incidunt consectetur quo qui tempore inventore minus rem atque velit ducimus earum ipsam, eius consequuntur? Libero consequatur voluptas, iusto deserunt aut id tempora architecto itaque quam nesciunt exercitationem. Dolor sunt corrupti quisquam velit.
+                {{ $game->desc }}
             </p>
             <div class="button">
                 <a href=""><i class="ri-google-play-line"></i>Download Games</a>
@@ -52,16 +52,19 @@
         <div class="carousel-box">
             <div class="carousel">
                 <div class="carousel-item">
-                    <img src="{{ asset('img/game/ingame/game1.jpg') }}" alt="image">
+                    <img src="{{ asset('storage/'.$game->ss1) }}" alt="image">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('img/game/ingame/game1.jpg') }}" alt="image">
+                    <img src="{{ asset('storage/'.$game->ss2) }}" alt="image">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('img/game/ingame/game1.jpg') }}" alt="image">
+                    <img src="{{ asset('storage/'.$game->ss3) }}" alt="image">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('img/game/ingame/game1.jpg') }}" alt="image">
+                    <img src="{{ asset('storage/'.$game->ss4) }}" alt="image">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ asset('storage/'.$game->ss5) }}" alt="image">
                 </div>
             </div>
         </div>
@@ -74,7 +77,7 @@
         </ul> --}}
     </div>
     <div class="trailer">
-        <video src="{{ asset('video/game/dinorun.mp4') }}" controls="true"></video>
+        <video src="{{ asset('storage/'.$game->video_demo) }}" controls="true"></video>
         <img class="close" src="{{ asset('img/content/close-circle-line.png') }}" onclick="toggleVideo()" alt="">
     </div>
 

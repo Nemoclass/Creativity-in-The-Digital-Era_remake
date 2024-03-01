@@ -100,7 +100,6 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: url('../../img/background/dinorun-bg.png') no-repeat;
     background-size: cover;
     background-position: center;
     overflow: hidden;
