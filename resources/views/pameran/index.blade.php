@@ -124,7 +124,7 @@
                     </article>
                 </div>
 
-                <a href="#" class="new__button button">See More Breads</a>
+                {{-- <a href="#" class="new__button button">See More Breads</a> --}}
             </div>
         </section>
 
@@ -137,7 +137,7 @@
                         Kami adalah penyelenggara pameran game yang berdedikasi untuk menyatukan komunitas pengembang dan penggemar game melalui platform kami. Kami berusaha untuk mempersembahkan karya-karya terbaru dan inovatif dalam industri hiburan interaktif, menciptakan pengalaman yang menginspirasi dan memperkaya bagi semua yang bergabung dengan kami.
                     </p>
 
-                    <a href="#" class="button">Know More</a>
+                    {{-- <a href="#" class="button">Know More</a> --}}
 
                     <img src="{{ asset('img/background/console2.png') }}" alt="image" class="about__poster">
                 </div>
@@ -267,15 +267,15 @@
 
             <div class="footer__content grid">
                 <div>
-                    <h3 class="footer__title">Address</h3>
+                    <h3 class="footer__title">Sing Gawe</h3>
 
                     <ul class="footer__list">
                         <li>
-                            <address class="footer__info">SMK N 1 Purwokerto</address>
+                            <address class="footer__info">Rizqy Bagus Saputra</address>
                         </li>
 
                         <li>
-                            <address class="footer__info">COMING SOON</address>
+                            <address class="footer__info">Vindra Arya Yulian</address>
                         </li>
                     </ul>
                 </div>

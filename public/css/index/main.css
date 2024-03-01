@@ -620,7 +620,7 @@ img{
 }
 
 /* Responsive */
-@media screen and (min-width: 340px) {
+@media screen and (max-width: 340px) {
     .container{
         margin-inline: 1rem;
     }
