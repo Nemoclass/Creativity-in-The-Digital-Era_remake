@@ -81,6 +81,92 @@
         <img class="close" src="{{ asset('img/content/close-circle-line.png') }}" onclick="toggleVideo()" alt="">
     </div>
 
+    <div class="container games">
+        <p style="color: white; font-weight: bold; font-size: 3rem; text-align: center; margin-top: 10px">Team</p>
+        <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
+            <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
+                <div class="card" style="padding: 10px">
+                    <img src="{{ asset('img/siswa/atha.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                    <div class="content">
+                    </div>
+                    <p style="color: white; padding: 5px; font-weight: bold;">Vindra Arya Yulian</p>
+                    <div class="info" style="margin-bottom: 20px;">
+                        <p>Kelas <br> <span>XII RPL 1</span></p>
+                        <p>Team <br> <span>Gedang</span></p>
+                        {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                    </div>
+                    <div class="progress-line">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
+                <div class="card" style="padding: 10px">
+                    <img src="{{ asset('img/siswa/atha.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                    <div class="content">
+                    </div>
+                    <p style="color: white; padding: 5px; font-weight: bold;">Vindra Arya Yulian</p>
+                    <div class="info" style="margin-bottom: 20px;">
+                        <p>Kelas <br> <span>XII RPL 1</span></p>
+                        <p>Team <br> <span>Gedang</span></p>
+                        {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                    </div>
+                    <div class="progress-line">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
+                <div class="card" style="padding: 10px">
+                    <img src="{{ asset('img/siswa/atha.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                    <div class="content">
+                    </div>
+                    <p style="color: white; padding: 5px; font-weight: bold;">Vindra Arya Yulian</p>
+                    <div class="info" style="margin-bottom: 20px;">
+                        <p>Kelas <br> <span>XII RPL 1</span></p>
+                        <p>Team <br> <span>Gedang</span></p>
+                        {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                    </div>
+                    <div class="progress-line">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
+                <div class="card" style="padding: 10px">
+                    <img src="{{ asset('img/siswa/atha.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                    <div class="content">
+                    </div>
+                    <p style="color: white; padding: 5px; font-weight: bold;">Vindra Arya Yulian</p>
+                    <div class="info" style="margin-bottom: 20px;">
+                        <p>Kelas <br> <span>XII RPL 1</span></p>
+                        <p>Team <br> <span>Gedang</span></p>
+                        {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                    </div>
+                    <div class="progress-line">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
+                <div class="card" style="padding: 10px">
+                    <img src="{{ asset('img/siswa/atha.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                    <div class="content">
+                    </div>
+                    <p style="color: white; padding: 5px; font-weight: bold;">Vindra Arya Yulian</p>
+                    <div class="info" style="margin-bottom: 20px;">
+                        <p>Kelas <br> <span>XII RPL 1</span></p>
+                        <p>Team <br> <span>Gedang</span></p>
+                        {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                    </div>
+                    <div class="progress-line">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ asset('javascript/game/main.js') }}"></script>
