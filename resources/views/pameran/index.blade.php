@@ -191,28 +191,168 @@
             </div>
         </section>
 
-        {{-- siswa --}}
-        <div class="container games">
-            <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
-                @foreach ($siswa as $s)
-                <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
-                    <div class="card" >
-                        <img src="{{ asset('storage/'.$s->foto_siswa) }}" style="padding: 1rem; border-radius: 2rem" alt="">
-                        <div class="content">
-                            <h4>{{ $s->nama_siswa }}</h4>
-                            <div class="info" style="margin-bottom: 20px;">
-                                <p>Kelas <br> <span>{{ $s->kelas }}</span></p>
-                                <p>Team <br> <span>{{ $s->team->nama_team }}</span></p>
-                                {{-- <a href="game/DinoRun.html">Lihat</a> --}}
-                            </div>
-                            <div class="progress-line">
-                                <span></span>
+        <div class="siswa">
+            <input type="radio" name="position" checked />
+            <input type="radio" name="position" />
+            <input type="radio" name="position" />
+            <input type="radio" name="position" />
+            <input type="radio" name="position" />
+            <main id="carousel">
+                <div class="item">
+                    <div class="container games">
+                        <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
+                            <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
+                                <div class="card" >
+                                    <img src="{{ asset('img/siswa/atha.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                                    <div class="content">
+                                        <h4>Atha Muyasar</h4>
+                                        <div class="info" style="margin-bottom: 20px;">
+                                            <p>Kelas <br> <span>XII RPL 1</span></p>
+                                            <p>Team <br> <span>Gedang</span></p>
+                                            {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                                        </div>
+                                        <div class="progress-line">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                @endforeach
-            </div>
+                <div class="item">
+                    <div class="container games">
+                        <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
+                            <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
+                                <div class="card" >
+                                    <img src="{{ asset('img/siswa/atha.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                                    <div class="content">
+                                        <h4>Atha Muyasar</h4>
+                                        <div class="info" style="margin-bottom: 20px;">
+                                            <p>Kelas <br> <span>XII RPL 1</span></p>
+                                            <p>Team <br> <span>Gedang</span></p>
+                                            {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                                        </div>
+                                        <div class="progress-line">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="container games">
+                        <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
+                            <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
+                                <div class="card" >
+                                    <img src="{{ asset('img/siswa/atha.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                                    <div class="content">
+                                        <h4>Atha Muyasar</h4>
+                                        <div class="info" style="margin-bottom: 20px;">
+                                            <p>Kelas <br> <span>XII RPL 1</span></p>
+                                            <p>Team <br> <span>Gedang</span></p>
+                                            {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                                        </div>
+                                        <div class="progress-line">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="container games">
+                        <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
+                            <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
+                                <div class="card" >
+                                    <img src="{{ asset('img/siswa/atha.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                                    <div class="content">
+                                        <h4>Atha Muyasar</h4>
+                                        <div class="info" style="margin-bottom: 20px;">
+                                            <p>Kelas <br> <span>XII RPL 1</span></p>
+                                            <p>Team <br> <span>Gedang</span></p>
+                                            {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                                        </div>
+                                        <div class="progress-line">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="container games">
+                        <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
+                            <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
+                                <div class="card" >
+                                    <img src="{{ asset('img/siswa/atha.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                                    <div class="content">
+                                        <h4>Atha Muyasar</h4>
+                                        <div class="info" style="margin-bottom: 20px;">
+                                            <p>Kelas <br> <span>XII RPL 1</span></p>
+                                            <p>Team <br> <span>Gedang</span></p>
+                                            {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                                        </div>
+                                        <div class="progress-line">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="container games">
+                        <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
+                            <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
+                                <div class="card" >
+                                    <img src="{{ asset('img/siswa/atha.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                                    <div class="content">
+                                        <h4>Atha Muyasar</h4>
+                                        <div class="info" style="margin-bottom: 20px;">
+                                            <p>Kelas <br> <span>XII RPL 1</span></p>
+                                            <p>Team <br> <span>Gedang</span></p>
+                                            {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                                        </div>
+                                        <div class="progress-line">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="container games">
+                        <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
+                            <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
+                                <div class="card" >
+                                    <img src="{{ asset('img/siswa/atha.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                                    <div class="content">
+                                        <h4>Atha Muyasar</h4>
+                                        <div class="info" style="margin-bottom: 20px;">
+                                            <p>Kelas <br> <span>XII RPL 1</span></p>
+                                            <p>Team <br> <span>Gedang</span></p>
+                                            {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                                        </div>
+                                        <div class="progress-line">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <main>
         </div>
     </main>
 
