@@ -90,3 +90,6 @@ sr.reveal(`.new__card:nth-child(3) img`, {rotate: {z: -30}, distance: 0, delay: 
 sr.reveal(`.favorite__card img`, {interval: 100, rotate: {z: 15}, distance: 0 })
 
 sr.reveal(`.footer__container`, { scale: 1 })
+
+// slider
+

@@ -533,7 +533,7 @@ img{
     position: absolute;
     width: 300px;
     height: 400px;
-    margin-bottom: 70px;
+    margin-bottom: 75px;
     /* background-color: coral; */
     --r: calc(var(--position) - var(--offset));
     --abs: max(calc(var(--r) * -1), var(--r));
@@ -604,7 +604,7 @@ img{
     --position: 5;
   }
 
-  .games .cardBx{
+.games .cardBx{
     width: 100%;
     min-height: 100%;
     display: flex;
