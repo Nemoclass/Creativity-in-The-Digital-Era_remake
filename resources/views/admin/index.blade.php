@@ -20,12 +20,10 @@
       <ul class="navbar-nav">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Admin
+            {{ Auth::user()->name }}
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="{{ route('logout') }}">Logout</a></li>
           </ul>
         </li>
       </ul>
@@ -170,6 +168,10 @@
                     <div class="mb-3">
                         <label for="tugas" class="form-label">Tugas dalam tim</label>
                         <input type="text" name="tugas" class="form-control" id="tugas">
+                    </div>
+                    <div class="mb-3">
+                        <label for="sosmed" class="form-label">Sosmed</label>
+                        <input type="text" name="sosmed" class="form-control" id="sosmed">
                     </div>
                     <div class="mb-3">
                       <select class="form-select" aria-label="Default select example" name="kelas">

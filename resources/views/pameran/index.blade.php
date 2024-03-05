@@ -35,8 +35,24 @@
                     <li class="nav__item">
                         <a href="#visit" class="nav__link">Exhibition</a>
                     </li>
+                    @auth
+                     @if(Auth::user()->level === "admin")
+                        <li class="nav__item">
+                            <a href="{{ route('admin-index') }}" class="nav__link">Admin Dashboard</a>
+                        </li>
+                        @endif
+                    @endauth
+                    
                     <li class="nav__item">
+                        @auth
+                        <span onclick="showLogout()" class="nav__link nav__login" style="cursor: pointer">Halo, {{ Auth::user()->name }}</span>
+                        <ul class="logout dis-none" id="showLogout">
+                            <li><a href="{{ route('logout') }}">Logout</a></li>
+                        </ul>
+                        @endauth
+                        @guest
                         <a href="{{ route('login') }}" class="nav__link nav__login">Login</a>
+                        @endguest
                     </li>
                 </ul>
 
@@ -333,5 +349,11 @@
 
     {{-- script --}}
     <script src="{{ asset('javascript/index/main.js') }}"></script>
+    <script>
+        function showLogout() {
+            const showLogout  = document.getElementById("showLogout");
+            showLogout.classList.remove("dis-none");
+        }
+    </script>
 </body>
 </html>
