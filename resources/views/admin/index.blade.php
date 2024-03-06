@@ -135,7 +135,7 @@
                       <td><img src="{{ asset('storage/'.$g->ss1) }}" alt="" srcset="" width="200px"></td>
                       <td style="max-width: 180px">{{ $g->desc }}</td>
                       <td>
-                        Edit | Hapus
+                        <a href="{{ route('admin-edit-game', ['id' => $g->id]) }}">Edit</a>
                       </td>
                     </tr>
                   @endforeach
@@ -188,10 +188,10 @@
                 <thead>
                   <tr>
                     <th>No</th>
-                    <th scope="col">Nama Game</th>
+                    <th scope="col">Nama Siswa</th>
+                    <th scope="col">Kelas</th>
+                    <th scope="col">Foto</th>
                     <th scope="col">Team</th>
-                    <th scope="col">Screenshoot</th>
-                    <th scope="col">Deskripsi</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -201,10 +201,10 @@
                   @foreach ($siswa as $s)
                     <tr>
                       <th>{{ $no++ }}</th>
-                      <th scope="row">{{ $s->nama_siswa }}</th>
-                      <td>{{ $s->team->kelas }}</td>
-                      <td><img src="{{ asset('storage/'.$g->foto_siswa) }}" alt="" srcset="" width="200px"></td>
-                      <td style="max-width: 180px">{{ $g->team->nama_team }}</td>
+                      <td scope="row">{{ $s->nama_siswa }}</td>
+                      <td>{{ $s->kelas }}</td>
+                      <td><img src="{{ asset('storage/'.$s->foto_siswa) }}" alt="" srcset="" width="120px"></td>
+                      <td style="max-width: 180px">{{ $s->team->nama_team }}</td>
                       <td>
                         Edit | Hapus
                       </td>

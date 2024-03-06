@@ -36,7 +36,7 @@
                         <a href="#visit" class="nav__link">Exhibition</a>
                     </li>
                     @auth
-                     @if(Auth::user()->level === "admin")
+                         @if(Auth::user()->role === "admin")
                         <li class="nav__item">
                             <a href="{{ route('admin-index') }}" class="nav__link">Admin Dashboard</a>
                         </li>
