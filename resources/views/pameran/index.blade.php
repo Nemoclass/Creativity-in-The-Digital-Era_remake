@@ -11,6 +11,9 @@
 
     {{-- REMIXICON --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.7.0/remixicon.css">
+
+    {{-- swiper --}}
+    <link rel="stylesheet" href="{{ asset('css/index/swiper-bundle.min.css') }}">
 </head>
 <body>
 
@@ -207,26 +210,21 @@
             </div>
         </section>
 
-        <h1>RPL 1</h1>
-        <div class="siswa">
-            <input type="radio" name="position" checked />
-            <input type="radio" name="position" />
-            <input type="radio" name="position" />
-            <input type="radio" name="position" />
-            <input type="radio" name="position" />
-            <main id="carousel">
-                @foreach ($siswa as $s)
-                <div class="item">
-                    <div class="container games">
+        <h2 class="section__title">participate</h2>
+        <section class="section siswa" id="siswa">
+            <h2 class="section__title">RPL 1</h2>
+            <div class="swiper siswa-Swiper">
+                <div class="swiper-wrapper">
+                    <div class="container games swiper-slide">
                         <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
                             <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
                                 <div class="card" >
-                                    <img src="{{ asset('storage/'.$s->foto_siswa) }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                                    <img src="{{ asset('img/siswa/rama.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
                                     <div class="content">
-                                        <h4>{{ $s->nama_siswa }}</h4>
+                                        <h4>Brahmana Nudzuli Ramadhani</h4>
                                         <div class="info" style="margin-bottom: 20px;">
-                                            <p>Kelas <br> <span>{{ $s->kelas }}</span></p>
-                                            <p>Team <br> <span>{{ $s->tugas }}</span></p>
+                                            <p>Kelas <br> <span>XII RPL 1</span></p>
+                                            <p>Team <br> <span>Gedang</span></p>
                                             {{-- <a href="game/DinoRun.html">Lihat</a> --}}
                                         </div>
                                         <div class="progress-line">
@@ -238,30 +236,21 @@
                         </div>
                     </div>
                 </div>
-                @endforeach
-            <main>
-        </div>
+            </div>
 
-        <h1>RPL 2</h1>
-        <div class="siswa">
-            <input type="radio" name="position" checked />
-            <input type="radio" name="position" />
-            <input type="radio" name="position" />
-            <input type="radio" name="position" />
-            <input type="radio" name="position" />
-            <main id="carousel">
-                @foreach ($siswa as $s)
-                <div class="item">
-                    <div class="container games">
+            <h2 class="section__title">RPL 2</h2>
+            <div class="swiper siswa-Swiper">
+                <div class="swiper-wrapper">
+                    <div class="container games swiper-slide">
                         <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
                             <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
                                 <div class="card" >
-                                    <img src="{{ asset('storage/'.$s->foto_siswa) }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                                    <img src="{{ asset('img/siswa/rama.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
                                     <div class="content">
-                                        <h4>{{ $s->nama_siswa }}</h4>
+                                        <h4>Brahmana Nudzuli Ramadhani</h4>
                                         <div class="info" style="margin-bottom: 20px;">
-                                            <p>Kelas <br> <span>{{ $s->kelas }}</span></p>
-                                            <p>Team <br> <span>{{ $s->tugas }}</span></p>
+                                            <p>Kelas <br> <span>XII RPL 1</span></p>
+                                            <p>Team <br> <span>Gedang</span></p>
                                             {{-- <a href="game/DinoRun.html">Lihat</a> --}}
                                         </div>
                                         <div class="progress-line">
@@ -273,9 +262,8 @@
                         </div>
                     </div>
                 </div>
-                @endforeach
-            <main>
-        </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
@@ -289,7 +277,7 @@
 
             <div class="footer__content grid">
                 <div>
-                    <h3 class="footer__title">Sing Gawe</h3>
+                    <h3 class="footer__title">Development by</h3>
 
                     <ul class="footer__list">
                         <li>
@@ -320,15 +308,15 @@
                     <h3 class="footer__title">Follow </h3>
 
                     <div class="footer__social">
-                        <a href="" target="_blank">
-                            <i class="ri-instagram-line"></i>
+                        <a href="https://www.instagram.com/uneso.smecone?igsh=MXE1ZXI3ZzNnYmtiOA==" target="_blank">
+                            @uneso
                         </a>
-                        <a href="" target="_blank">
-                            <i class="ri-tiktok-line"></i>
+                        <a href="https://www.instagram.com/soneetwo?igsh=MWVseWlldmxtNnVlaQ==" target="_blank">
+                            @soneetwo
                         </a>
-                        <a href="" target="_blank">
+                        {{-- <a href="" target="_blank">
                             <i class="ri-threads-line"></i>
-                        </a>
+                        </a> --}}
                     </div>
                 </div>
             </div>
@@ -336,13 +324,15 @@
             <img src="{{ asset('img/content/Tujuan.png') }}" alt="image" class="footer__img-2">
         </div>
         <span class="footer__copy">
-            &#169; Copy Rights By Rpl Exhibition 2024
+            &#169; Copyright By Rpl Exhibition 2024
         </span>
     </footer>
 
     {{-- scroll up --}}
     <a href="#" class="scrollup" id="scroll-up"><i class="ri-arrow-up-line"></i></a>
 
+    {{-- swiper --}}
+    <script src="{{ asset('javascript/index/swiper-bundle.min.js') }}"></script>
 
     {{-- scroll reveall --}}
     <script src="{{ asset('javascript/index/scrollreveal.min.js') }}"></script>

@@ -93,3 +93,20 @@ sr.reveal(`.footer__container`, { scale: 1 })
 
 // slider
 
+var swiper = new Swiper(".siswa-Swiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+

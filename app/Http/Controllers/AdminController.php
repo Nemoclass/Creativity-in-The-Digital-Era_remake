@@ -31,7 +31,7 @@ class AdminController extends Controller
         $pathSs3 = $request->file('ss3')->store('ss3');
         $pathSs4 = $request->file('ss4')->store('ss4');
         $pathSs5 = $request->file('ss5')->store('ss5');
-        
+
        $dd = Game::create([
             'title' => $request->title,
             'logo_icon'=> $pathIcon,
@@ -103,7 +103,7 @@ class AdminController extends Controller
                     'ss5' => $pathSs5,
                     'team_id' => $req->team_id,
                 ]);
-                
+
         } else {
             $game->update([
                     'title' => $req->title,
@@ -121,7 +121,7 @@ class AdminController extends Controller
 
          return back();
     }
-    
+
     public function store__team(Request $request){
         Team::create($request->all());
         return back();
