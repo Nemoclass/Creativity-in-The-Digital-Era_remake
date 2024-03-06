@@ -33,7 +33,7 @@ class AdminController extends Controller
         $pathSs3 = $request->file('ss3')->store('ss3');
         $pathSs4 = $request->file('ss4')->store('ss4');
         $pathSs5 = $request->file('ss5')->store('ss5');
-        
+
        $dd = Game::create([
             'title' => $request->title,
             'logo_icon'=> $pathIcon,
