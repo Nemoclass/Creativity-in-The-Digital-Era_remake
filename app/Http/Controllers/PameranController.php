@@ -10,12 +10,12 @@ class PameranController extends Controller
 {
     public function index(){
         $siswa = Siswa::with('team')->get();
-        $game = Game::with('team')->get();
+        $game = Game::withCount('likes')->get();
         return view('pameran.index', compact('siswa','game'));
     }
 
     public function game($id){
-        $game = Game::find($id);
+        $game = Game::with('team')->find($id);
         return view('pameran.game.index', compact('game'));
     }
 }

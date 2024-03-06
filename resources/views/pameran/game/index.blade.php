@@ -20,7 +20,7 @@
     {{-- header --}}
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="" class="nav__logo">
+            <a href="{{ route('index') }}" class="nav__logo">
                 <img src="{{ asset('img/logo/Logo WEB Pameran Game-01.png') }}" alt="" class="nav__logo-img">
                 Rpl Exhibition
             </a>
@@ -39,8 +39,12 @@
                     <li class="nav__item">
                         <a href="#trick" class="nav__link">Team</a>
                     </li>
-
+                    @auth
+                        <span class="nav__link">Halo, {{ Auth::user()->name }}</span>
+                    @endauth
+                    @guest
                     <a href="" class="button button--ghost">Login</a>
+                    @endguest
                 </ul>
 
                 <div class="nav__close" id="nav-close">
@@ -59,28 +63,33 @@
         <section class="home container" id="home">
             <div class="home__content grid">
                 <div class="home__group">
-                    <img src="{{ asset('img/game/icon/dinorun.png') }}" alt="" class="home__img">
+                    <img src="{{ asset('storage/'.$game->logo_icon) }}" alt="" class="home__img">
                     <div class="home__indicator"></div>
 
                     <div class="home__details-img">
-                        <h4 class="home__details-title">Dino Run</h4>
-                        <span class="home__details-subtitle">Gedang</span>
+                        <h4 class="home__details-title">{{ $game->title }}</h4>
+                        <span class="home__details-subtitle">{{ $game->team->nama_team }}</span>
                     </div>
                 </div>
 
                 <div class="home__data">
-                    <h3 class="home__subtitle">Gedang</h3>
-                    <h1 class="home__title">DinoRun</h1>
-                    <p class="home__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor quis doloremque ad autem, architecto earum aliquid aliquam esse? Quis, quibusdam.</p>
+                    <h3 class="home__subtitle">{{ $game->team->nama_team }}</h3>
+                    <h1 class="home__title">{{ $game->title }}</h1>
+                    <p class="home__description">{{ $game->desc }}</p>
 
                     <div class="home__buttons">
                         <a href="" class="button">Download Now</a>
-                        <a href="" class="button button--link button--flex">
-                            like
-                            <i class="ri-heart-line"></i>
-                            |
-                            <i class="ri-heart-fill"></i>
-                        </a>
+                        <form action="{{ route('like', ['id' => $game->id]) }}" method="POST">
+                    @csrf
+                    <button type="submit" class="button button--link button--flex">
+                        @auth
+                            {{ Auth::user()->hasLiked($game) ? 'Dislike' : 'Like' }}
+                        @else
+                            Like
+                        @endauth
+                    </button>
+                </form>
+                    
                     </div>
                 </div>
             </div>
@@ -94,22 +103,22 @@
                 <div class="swiper new-Swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <video src="{{ asset('video/game/dinorun.mp4') }}" autoplay controls width="100%" height="auto"></video>
+                            <video src="{{ asset('storage/'.$game->video_demo) }}" autoplay controls width="100%" height="auto"></video>
                         </div>
                         <div class="swiper-slide">
-                            <img src="{{ asset('img/game/icon/WhatsApp Image 2024-03-01 at 14.07.35.jpeg') }}" alt="">
+                            <img src="{{ asset('storage/'.$game->ss1) }}" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{{ asset('img/game/icon/WhatsApp Image 2024-03-01 at 14.07.35.jpeg') }}" alt="">
+                            <img src="{{ asset('storage/'.$game->ss2) }}" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{{ asset('img/game/icon/WhatsApp Image 2024-03-01 at 14.07.35.jpeg') }}" alt="">
+                            <img src="{{ asset('storage/'.$game->ss3) }}" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{{ asset('img/game/icon/WhatsApp Image 2024-03-01 at 14.07.35.jpeg') }}" alt="">
+                            <img src="{{ asset('storage/'.$game->ss4) }}" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{{ asset('img/game/icon/WhatsApp Image 2024-03-01 at 14.07.35.jpeg') }}" alt="">
+                            <img src="{{ asset('storage/'.$game->ss5) }}" alt="">
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>

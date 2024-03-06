@@ -41,4 +41,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    
+    /**
+     * Get all of the comments for the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function hasLiked(Game $game){
+        return $this->likes()->where('game_id', $game->id)->exists();
+    }
+    public function likes(){
+        return $this->hasMany(Like::class);
+    }
 }

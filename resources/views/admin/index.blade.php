@@ -9,7 +9,7 @@
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="{{ route('index') }}">
       <img src="{{ asset('img/logo/Logo WEB Pameran Game-01.png') }}" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
       RPL Game Exhibition
     </a>
@@ -206,7 +206,7 @@
                       <td><img src="{{ asset('storage/'.$s->foto_siswa) }}" alt="" srcset="" width="120px"></td>
                       <td style="max-width: 180px">{{ $s->team->nama_team }}</td>
                       <td>
-                        Edit | Hapus
+                        <a href="" class="badge badge-warning">Edit</a>
                       </td>
                     </tr>
                   @endforeach

@@ -177,7 +177,7 @@
                     <div class="favorite__data">
                         <h2 class="favorite__title">{{ $g->title }}</h2>
                         <span class="favorite__subtitle">{{ $g->team->nama_team }}</span>
-                        <h3 class="favorite__price">Like 52</h3>
+                        <h3 class="favorite__price">Like {{ $g->likes_count }}</h3>
                     </div>
 
                     <button class="favorite__button button">

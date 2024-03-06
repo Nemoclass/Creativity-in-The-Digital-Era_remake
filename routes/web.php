@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\LikeController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PameranController;
 
 /*
@@ -28,6 +29,7 @@ Route::prefix('process')->group(function () {
 Route::middleware(['auth',])->group(function () {
     
     Route::get('/games/{id}', [PameranController::class, 'game'])->name('game');
+    Route::post('/like/{id}', [LikeController::class, 'like'])->name('like');
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
     Route::middleware(['auth' , 'role:admin'])->group(function () {
