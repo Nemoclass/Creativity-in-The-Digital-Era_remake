@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Creativity in The Digital Era</title>
+    <title>Creativity in Digital Era</title>
 
     {{-- css --}}
     <link rel="stylesheet" href="{{ asset('css/index/main.css') }}">
@@ -42,7 +42,7 @@
                         </li>
                         @endif
                     @endauth
-                    
+
                     <li class="nav__item">
                         @auth
                         <span onclick="showLogout()" class="nav__link nav__login" style="cursor: pointer">Halo, {{ Auth::user()->name }}</span>
@@ -73,13 +73,13 @@
 
     <main class="main">
         <section class="home section" id="home">
-            <img src="{{ asset('img/game/ingame/game1.jpg') }}" alt="image" class="home__bg">
+            <img src="{{ asset('img/background/background.jpeg') }}" alt="image" class="home__bg">
             <div class="home__shadow"></div>
 
             <div class="home__container container grid">
                 <div class="home__data">
                     <h1 class="home__title">
-                        Creativity in <br> The Digital Era
+                        Creativity in <br> Digital Era
                     </h1>
 
                     {{-- <a href="#" class="button">Select Games</a> --}}
