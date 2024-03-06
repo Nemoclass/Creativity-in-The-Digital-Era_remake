@@ -57,7 +57,7 @@
 
     <main class="main">
         <section class="home section" id="home">
-            <img src="{{ asset('img/game/ingame/game1.jpg') }}" alt="image" class="home__bg">
+            <img src="{{ asset('img/background/background.jpeg') }}" alt="image" class="home__bg">
             <div class="home__shadow"></div>
 
             <div class="home__container container grid">

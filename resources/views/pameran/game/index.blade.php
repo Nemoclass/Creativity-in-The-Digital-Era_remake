@@ -4,97 +4,231 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Games</title>
 
     {{-- css --}}
     <link rel="stylesheet" href="{{ asset('css/game/main.css') }}">
 
-    {{-- Materialize --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
     {{-- REMIXICON --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.7.0/remixicon.css">
 
+    {{-- swiper --}}
+    <link rel="stylesheet" href="{{ asset('css/game/swiper-bundle.min.css') }}">
 </head>
 <body>
 
-    {{-- <header>
-        <a href="" class="logo">Rpl Exhibition</a>
-        <ul class="nav">
-            <li><a href="#"><i class="ri-home-3-line"></i></a></li>
-            <li><a href="#">Adults</a></li>
-            <li><a href="#">Kids</a></li>
-            <li><a href="#">Trend</a></li>
-            <li><a href="#">My List</a></li>
-        </ul>
-        <div class="search">
-            <input type="search" placeholder="Search">
-            <i class="ri-search-line"></i>
-        </div>
-    </header> --}}
-    <div class="banner" style="background: url({{ asset('storage/'.$game->ss1) }}) no-repeat;">
-        <div class="content active">
-            <img src="{{ asset('storage/'.$game->logo_text) }}" alt="image" class="movie-title">
-            <h4>
-                <span>Petualangan</span>
-                <span>Advanture</span><span>Kidz</span>
-            </h4>
-            <p>
-                {{ $game->desc }}
-            </p>
-            <div class="button">
-                <div class="download">
-                    <a href=""><i class="ri-google-play-line"></i>Download Games</a>
+    {{-- header --}}
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="" class="nav__logo">
+                <img src="{{ asset('img/logo/Logo WEB Pameran Game-01.png') }}" alt="" class="nav__logo-img">
+                Rpl Exhibition
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    {{-- <li class="nav__item">
+                        <a href="#home" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About</a>
+                    </li> --}}
+                    <li class="nav__item">
+                        <a href="#new" class="nav__link">Games</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#trick" class="nav__link">Team</a>
+                    </li>
+
+                    <a href="" class="button button--ghost">Login</a>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
                 </div>
-                <div class="like">
-                    <a href=""><i class="ri-heart-line"></i> | <i class="ri-heart-fill"></i> Like</a>
-                    <a href="{{ route('index') }}">Kembali</a>
+
+                <img src="{{ asset('img/background/console2.png') }}" alt="" class="nav__img">
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-layout-grid-fill"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="home container" id="home">
+            <div class="home__content grid">
+                <div class="home__group">
+                    <img src="{{ asset('img/game/icon/dinorun.png') }}" alt="" class="home__img">
+                    <div class="home__indicator"></div>
+
+                    <div class="home__details-img">
+                        <h4 class="home__details-title">Dino Run</h4>
+                        <span class="home__details-subtitle">Gedang</span>
+                    </div>
+                </div>
+
+                <div class="home__data">
+                    <h3 class="home__subtitle">Gedang</h3>
+                    <h1 class="home__title">DinoRun</h1>
+                    <p class="home__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor quis doloremque ad autem, architecto earum aliquid aliquam esse? Quis, quibusdam.</p>
+
+                    <div class="home__buttons">
+                        <a href="" class="button">Download Now</a>
+                        <a href="" class="button button--link button--flex">
+                            like
+                            <i class="ri-heart-line"></i>
+                            |
+                            <i class="ri-heart-fill"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
+        <section class="section new" id="new">
+            <h2 class="section__title">Games</h2>
 
-        <div class="carousel-box">
-            <div class="carousel">
-                <div class="carousel-item">
-                    <img src="{{ asset('storage/'.$game->ss1) }}" alt="image">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ asset('storage/'.$game->ss2) }}" alt="image">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ asset('storage/'.$game->ss3) }}" alt="image">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ asset('storage/'.$game->ss4) }}" alt="image">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ asset('storage/'.$game->ss5) }}" alt="image">
+            <div class="new__container container">
+                <!-- Swiper -->
+                <div class="swiper new-Swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <video src="{{ asset('video/game/dinorun.mp4') }}" autoplay controls width="100%" height="auto"></video>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ asset('img/game/icon/WhatsApp Image 2024-03-01 at 14.07.35.jpeg') }}" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ asset('img/game/icon/WhatsApp Image 2024-03-01 at 14.07.35.jpeg') }}" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ asset('img/game/icon/WhatsApp Image 2024-03-01 at 14.07.35.jpeg') }}" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ asset('img/game/icon/WhatsApp Image 2024-03-01 at 14.07.35.jpeg') }}" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ asset('img/game/icon/WhatsApp Image 2024-03-01 at 14.07.35.jpeg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-        {{-- <a href="#" class="play" onclick="toggleVideo()"><i class="ri-play-circle-line"></i>Play Tutorial</a> --}}
-        <span class="play" onclick="toggleVideo()"><i class="ri-play-circle-line"></i>Play Tutorial</span>
-        {{-- <ul class="sci">
-            <li><a href="#"><i class="ri-instagram-line"></i></a></li>
-            <li><a href="#"><i class="ri-tiktok-line"></i></a></li>
-            <li><a href="#"><i class="ri-threads-line"></i></a></li>
-        </ul> --}}
-    <div class="trailer">
-        <video src="{{ asset('storage/'.$game->video_demo) }}" controls="true"></video>
-        <img class="close" src="{{ asset('img/content/close-circle-line.png') }}" onclick="toggleVideo()" alt="">
-    </div>
+        <section class="section trick" id="trick">
+            <h2 class="section__title">Team</h2>
 
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            <div class="swiper team-Swiper">
+                <div class="swiper-wrapper">
+                    <div class="container games swiper-slide">
+                        <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
+                            <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
+                                <div class="card" >
+                                    <img src="{{ asset('img/siswa/rama.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                                    <div class="content">
+                                        <h4>Brahmana Nudzuli Ramadhani</h4>
+                                        <div class="info" style="margin-bottom: 20px;">
+                                            <p>Kelas <br> <span>XII RPL 1</span></p>
+                                            <p>Tugas <br> <span>Programmer</span></p>
+                                            {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                                        </div>
+                                        <div class="progress-line">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container games swiper-slide">
+                        <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
+                            <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
+                                <div class="card" >
+                                    <img src="{{ asset('img/siswa/rama.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                                    <div class="content">
+                                        <h4>Brahmana Nudzuli Ramadhani</h4>
+                                        <div class="info" style="margin-bottom: 20px;">
+                                            <p>Kelas <br> <span>XII RPL 1</span></p>
+                                            <p>Tugas <br> <span>Programmer</span></p>
+                                            {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                                        </div>
+                                        <div class="progress-line">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container games swiper-slide">
+                        <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
+                            <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
+                                <div class="card" >
+                                    <img src="{{ asset('img/siswa/rama.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                                    <div class="content">
+                                        <h4>Brahmana Nudzuli Ramadhani</h4>
+                                        <div class="info" style="margin-bottom: 20px;">
+                                            <p>Kelas <br> <span>XII RPL 1</span></p>
+                                            <p>Tugas <br> <span>Programmer</span></p>
+                                            {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                                        </div>
+                                        <div class="progress-line">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container games swiper-slide">
+                        <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
+                            <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
+                                <div class="card" >
+                                    <img src="{{ asset('img/siswa/rama.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                                    <div class="content">
+                                        <h4>Brahmana Nudzuli Ramadhani</h4>
+                                        <div class="info" style="margin-bottom: 20px;">
+                                            <p>Kelas <br> <span>XII RPL 1</span></p>
+                                            <p>Tugas <br> <span>Programmer</span></p>
+                                            {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                                        </div>
+                                        <div class="progress-line">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container games swiper-slide">
+                        <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
+                            <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
+                                <div class="card" >
+                                    <img src="{{ asset('img/siswa/rama.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                                    <div class="content">
+                                        <h4>Brahmana Nudzuli Ramadhani</h4>
+                                        <div class="info" style="margin-bottom: 20px;">
+                                            <p>Kelas <br> <span>XII RPL 1</span></p>
+                                            <p>Tugas <br> <span>Programmer</span></p>
+                                            {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                                        </div>
+                                        <div class="progress-line">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {{-- swiper --}}
+    <script src="{{ asset('javascript/game/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('javascript/game/main.js') }}"></script>
-
-    <script>
-        $(document).ready(function(){
-            $('.carousel').carousel();
-        });
-    </script>
 </body>
 </html>
