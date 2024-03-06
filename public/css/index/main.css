@@ -794,7 +794,15 @@ img{
     text-align: center;
     font-size: var(--small-font-size);
 }
+.logout{
+    width: 100%; 
+    background-color: white; 
+    text-align:center;
+}
 
+.dis-none{
+    display: none;
+}
 /* scrollbar */
 ::-webkit-scrollbar{
     width: .6rem;

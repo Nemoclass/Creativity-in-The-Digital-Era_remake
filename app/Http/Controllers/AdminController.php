@@ -54,6 +54,7 @@ class AdminController extends Controller
             'foto_siswa' => $pathSiswa,
             'tugas' => $request->tugas,
             'kelas' => $request->kelas,
+            'sosmed' => $request->sosmed,
             'team_id' => $request->team_id,
         ]);
         return back();

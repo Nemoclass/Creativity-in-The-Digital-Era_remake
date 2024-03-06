@@ -22,17 +22,16 @@
 				<div class="col-md-6 col-lg-4">
 					<div class="login-wrap p-0">
 		      	<h3 class="mb-4 text-center" style="font-family: 'Popins'; letter-spacing:10px;">RPL EXHIBITION</h3>
-		      	<form action="/login-send-data" method="post" class="signin-form">
+		      	<form action="{{ route('store-users') }}" method="post" class="signin-form">
 					@csrf
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Username" required name="name">
+					</div>
 		      		<div class="form-group">
-		      			<input type="text" class="form-control" placeholder="Email" required name="name">
-		      		</div>
-		      		<div class="form-group">
-		      			<input type="text" class="form-control" placeholder="Username" required name="name">
+		      			<input type="text" class="form-control" placeholder="Email" required name="email">
 		      		</div>
 	            <div class="form-group">
 	              <input id="password-field" type="password" class="form-control" placeholder="Password" name="password" required>
-	              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                   <div class="mt-2">
                       <span>Sudah Memili Akun?</span>
                       <a href="{{ route('login') }}" class="mr-5"> login disini</a>

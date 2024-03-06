@@ -13,9 +13,6 @@ class TeamSeeder extends Seeder
      */
     public function run()
     {
-        $adminAcc = [
-            ['name'=>'Admin Jundi', 'role'],
-        ];
-        User::create();
+    
     }
 }
