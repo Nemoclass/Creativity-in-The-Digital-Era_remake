@@ -101,7 +101,7 @@
                     </div>
 
                     <div class="home__social">
-                        <a href="" target="_blank">
+                        {{-- <a href="" target="_blank">
                             <i class="ri-instagram-line"></i>
                         </a>
                         <a href="" target="_blank">
@@ -109,7 +109,7 @@
                         </a>
                         <a href="" target="_blank">
                             <i class="ri-threads-line"></i>
-                        </a>
+                        </a> --}}
                     </div>
                 </footer>
             </div>
