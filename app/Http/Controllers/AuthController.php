@@ -33,8 +33,12 @@ class AuthController extends Controller
             'password' => Hash::make($req->password)
         ]);
         Auth::login($users);
-        // event(new Registered($users));
-        return redirect()->route('login');
+        event(new Registered($users));
+        $notif = array(
+            'message' => 'Akun berhasil dibuat, silahkan cek email untuk verifikasi',
+            'alert' => 'success'
+        );
+        return redirect()->route('login')->with($notif);
     }
 
     public function logout(){

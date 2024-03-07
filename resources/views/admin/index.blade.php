@@ -107,7 +107,12 @@
                           <option value="{{ $t->id }}">{{ $t->nama_team }}</option>
                         @endforeach
                   </select>
-                      </div>
+                </div>
+                <select class="form-select" aria-label="Default select example" name="orientation">
+                  <option selected>Pilih Oritentasi</option>
+                  <option value="Potrait">Potrait</option>
+                  <option value="Landscape">Landscape</option>
+                </select>
                     </div>
                     <button class="btn btn-success d-block ms-auto">Kirim</button>
                 </form>

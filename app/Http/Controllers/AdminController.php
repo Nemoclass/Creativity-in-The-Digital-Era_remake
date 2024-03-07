@@ -40,6 +40,7 @@ class AdminController extends Controller
             'video_demo'=> $pathVideo,
             'logo_text'=> $pathText,
             'desc' => $request->desc,
+            'orientation' => $request->orientation,
             'ss1' => $pathSs1,
             'ss2' => $pathSs2,
             'ss3' => $pathSs3,

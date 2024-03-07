@@ -68,8 +68,10 @@
   "showMethod": "fadeIn",
   "hideMethod": "fadeOut"
 }
-		toastr["success"]('My name is Inigo Montoya. You killed my father, prepare to die!')
-  </script>
+		@if (Session::has('message'))
+			toastr.{{ Session::get('alert') }}("{{ Session::get('message') }}")
+		@endif
+		</script>
 	</body>
 </html>
 
