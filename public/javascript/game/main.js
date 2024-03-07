@@ -52,20 +52,8 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 //   });
 
 var swiper = new Swiper(".new-Swiper", {
-    effect: "coverflow",
+    effect: "cards",
     grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-    },
   });
 
 var swiper = new Swiper(".team-Swiper", {

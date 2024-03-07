@@ -302,7 +302,11 @@
                         </li>
 
                         <li>
-                            <address class="footer__info" ><a href="" style="color: white">XII RPL 1</a> | <a href="" style="color: white">XII RPL 2</a></address>
+                            <address class="footer__info" >
+                                <a href="https://www.instagram.com/uneso.smecone?igsh=MXE1ZXI3ZzNnYmtiOA==" style="color: white">XII RPL 1</a>
+                                |
+                                <a href="https://www.instagram.com/soneetwo?igsh=MWVseWlldmxtNnVlaQ==" style="color: white">XII RPL 2</a>
+                            </address>
                         </li>
                     </ul>
                 </div>
