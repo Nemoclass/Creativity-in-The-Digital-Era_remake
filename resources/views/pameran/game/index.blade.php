@@ -89,7 +89,7 @@
                         @endauth
                     </button>
                 </form>
-                    
+
                     </div>
                 </div>
             </div>
@@ -121,7 +121,7 @@
                             <img src="{{ asset('storage/'.$game->ss5) }}" alt="">
                         </div>
                     </div>
-                    <div class="swiper-pagination"></div>
+                    {{-- <div class="swiper-pagination"></div> --}}
                 </div>
             </div>
         </section>
