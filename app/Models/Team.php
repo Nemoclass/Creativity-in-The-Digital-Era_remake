@@ -12,12 +12,12 @@ class Team extends Model
     use HasFactory;
     protected $guarded=[];
 
-    public function games()
+    public function game()
     {
         return $this->hasMany(Game::class);
     }
 
-    public function siswas()
+    public function siswa()
     {
         return $this->hasMany(Siswa::class);
     }

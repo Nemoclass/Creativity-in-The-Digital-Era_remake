@@ -133,16 +133,17 @@
 
             <div class="swiper team-Swiper">
                 <div class="swiper-wrapper">
+                    @foreach ($siswa as $i)
                     <div class="container games swiper-slide">
                         <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
                             <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
                                 <div class="card" >
-                                    <img src="{{ asset('img/siswa/rama.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                                    <img src="{{ asset('storage/'.$i->foto_siswa) }}" style="padding: 1rem; border-radius: 2rem" alt="">
                                     <div class="content">
-                                        <h4>Brahmana Nudzuli Ramadhani</h4>
+                                        <h4>{{ $i->nama_siswa }}</h4>
                                         <div class="info" style="margin-bottom: 20px;">
-                                            <p>Kelas <br> <span>XII RPL 1</span></p>
-                                            <p>Tugas <br> <span>Programmer</span></p>
+                                            <p>Kelas <br> <span>{{ $i->kelas }}</span></p>
+                                            <p>Tugas <br> <span>{{ $i->tugas }}</span></p>
                                             {{-- <a href="game/DinoRun.html">Lihat</a> --}}
                                         </div>
                                         <div class="progress-line">
@@ -153,86 +154,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="container games swiper-slide">
-                        <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
-                            <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
-                                <div class="card" >
-                                    <img src="{{ asset('img/siswa/rama.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
-                                    <div class="content">
-                                        <h4>Brahmana Nudzuli Ramadhani</h4>
-                                        <div class="info" style="margin-bottom: 20px;">
-                                            <p>Kelas <br> <span>XII RPL 1</span></p>
-                                            <p>Tugas <br> <span>Programmer</span></p>
-                                            {{-- <a href="game/DinoRun.html">Lihat</a> --}}
-                                        </div>
-                                        <div class="progress-line">
-                                            <span></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container games swiper-slide">
-                        <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
-                            <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
-                                <div class="card" >
-                                    <img src="{{ asset('img/siswa/rama.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
-                                    <div class="content">
-                                        <h4>Brahmana Nudzuli Ramadhani</h4>
-                                        <div class="info" style="margin-bottom: 20px;">
-                                            <p>Kelas <br> <span>XII RPL 1</span></p>
-                                            <p>Tugas <br> <span>Programmer</span></p>
-                                            {{-- <a href="game/DinoRun.html">Lihat</a> --}}
-                                        </div>
-                                        <div class="progress-line">
-                                            <span></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container games swiper-slide">
-                        <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
-                            <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
-                                <div class="card" >
-                                    <img src="{{ asset('img/siswa/rama.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
-                                    <div class="content">
-                                        <h4>Brahmana Nudzuli Ramadhani</h4>
-                                        <div class="info" style="margin-bottom: 20px;">
-                                            <p>Kelas <br> <span>XII RPL 1</span></p>
-                                            <p>Tugas <br> <span>Programmer</span></p>
-                                            {{-- <a href="game/DinoRun.html">Lihat</a> --}}
-                                        </div>
-                                        <div class="progress-line">
-                                            <span></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container games swiper-slide">
-                        <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
-                            <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
-                                <div class="card" >
-                                    <img src="{{ asset('img/siswa/rama.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
-                                    <div class="content">
-                                        <h4>Brahmana Nudzuli Ramadhani</h4>
-                                        <div class="info" style="margin-bottom: 20px;">
-                                            <p>Kelas <br> <span>XII RPL 1</span></p>
-                                            <p>Tugas <br> <span>Programmer</span></p>
-                                            {{-- <a href="game/DinoRun.html">Lihat</a> --}}
-                                        </div>
-                                        <div class="progress-line">
-                                            <span></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </section>
