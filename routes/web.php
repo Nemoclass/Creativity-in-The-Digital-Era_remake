@@ -29,8 +29,12 @@ Route::prefix('process')->group(function () {
 Route::middleware(['auth',])->group(function () {
     
     Route::get('/games/{id}', [PameranController::class, 'game'])->name('game');
-    Route::post('/like/{id}', [LikeController::class, 'like'])->name('like');
+    Route::post('/like/{id}', [LikeController::class, 'like'])->name('like')->middleware('verified');
+    
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::get('/email/verify', [AuthController::class, 'email__notice'])->middleware('auth')->name('verification.notice');
+    Route::get('/email/verify/{id}/{hash}', [AuthController::class, 'email__verify'])->middleware('auth', 'signed')->name('verification.verify');
+    Route::post('/email/verification-notification', [AuthController::class, 'email__resend'])->middleware(['auth', 'throttle:6,1'])->name('verification.send');
 
     Route::middleware(['auth' , 'role:admin'])->group(function () {
          Route::prefix('admin')->group(function () {

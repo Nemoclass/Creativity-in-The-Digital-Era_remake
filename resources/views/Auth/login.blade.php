@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="{{ asset('assets_login/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/auth/main.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/toastr.min.css') }}">
 
 	</head>
 	<body class="img" style="background-image: url({{ asset('img/auth/bg.jpg') }});">
@@ -48,7 +49,27 @@
   <script src="{{ asset('assets_login/js/popper.js') }}"></script>
   <script src="{{ asset('assets_login/js/bootstrap.min.js') }}"></script>
   <script src="{{ asset('assets_login/js/main.js') }}"></script>
-
+  <script src="{{ asset('javascript/toastr.min.js') }}"></script>
+  <script>
+		  toastr.options = {
+  "closeButton": true,
+  "debug": false,
+  "newestOnTop": false,
+  "progressBar": true,
+  "positionClass": "toast-top-full-width",
+  "preventDuplicates": false,
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
+		toastr["success"]('My name is Inigo Montoya. You killed my father, prepare to die!')
+  </script>
 	</body>
 </html>
 

@@ -184,7 +184,7 @@
                     </div>
 
                     <button class="favorite__button button">
-                        <a href="{{ route('game', ['id' => $g->id]) }}"><i class="ri-eye-line"></i></a>
+                        <a href="{{ route('game', ['id' => $g->id]) }}" style="color: white"><i class="ri-eye-line"></i></a>
                     </button>
                 </article>
                 @endforeach
@@ -198,7 +198,7 @@
 
                 <div class="visit__content container grid">
                     <div class="visit__data">
-                        <h2 class="section__title">Future Game</h2>
+                        <h2 class="section__title">Participate Exhibition</h2>
 
                         <p class="visit__description">
                             Find the best games, we look forward to your visit to the RPL GAMES EXHIBITION.
@@ -210,57 +210,60 @@
             </div>
         </section>
 
-        <h2 class="section__title">participate</h2>
         <section class="section siswa" id="siswa">
             <h2 class="section__title">RPL 1</h2>
             <div class="swiper siswa-Swiper">
                 <div class="swiper-wrapper">
-                    <div class="container games swiper-slide">
-                        <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
-                            <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
-                                <div class="card" >
-                                    <img src="{{ asset('img/siswa/rama.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
-                                    <div class="content">
-                                        <h4>Brahmana Nudzuli Ramadhani</h4>
-                                        <div class="info" style="margin-bottom: 20px;">
-                                            <p>Kelas <br> <span>XII RPL 1</span></p>
-                                            <p>Team <br> <span>Gedang</span></p>
-                                            {{-- <a href="game/DinoRun.html">Lihat</a> --}}
-                                        </div>
-                                        <div class="progress-line">
-                                            <span></span>
+                    @foreach ($siswa as $s)
+                        <div class="container games swiper-slide">
+                            <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
+                                <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
+                                    <div class="card" >
+                                        <img src="{{ asset('storage/'.$s->foto_siswa) }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                                        <div class="content">
+                                            <h4>{{ $s->nama_siswa }}</h4>
+                                            <div class="info" style="margin-bottom: 20px;">
+                                                <p>Kelas <br> <span>{{ $s->kelas }}</span></p>
+                                                <p> <br> <span><a href="{{ $s->sosmed }}" target="_blank"><i class="ri-instagram-line"></i></a></span></p>
+                                                {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                                            </div>
+                                            <div class="progress-line">
+                                                <span></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
 
             <h2 class="section__title">RPL 2</h2>
             <div class="swiper siswa-Swiper">
                 <div class="swiper-wrapper">
-                    <div class="container games swiper-slide">
-                        <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
-                            <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
-                                <div class="card" >
-                                    <img src="{{ asset('img/siswa/rama.jpg') }}" style="padding: 1rem; border-radius: 2rem" alt="">
-                                    <div class="content">
-                                        <h4>Brahmana Nudzuli Ramadhani</h4>
-                                        <div class="info" style="margin-bottom: 20px;">
-                                            <p>Kelas <br> <span>XII RPL 1</span></p>
-                                            <p>Team <br> <span>Gedang</span></p>
-                                            {{-- <a href="game/DinoRun.html">Lihat</a> --}}
-                                        </div>
-                                        <div class="progress-line">
-                                            <span></span>
+                    @foreach ($siswa as $s)
+                        <div class="container games swiper-slide">
+                            <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
+                                <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
+                                    <div class="card" >
+                                        <img src="{{ asset('storage/'.$s->foto_siswa) }}" style="padding: 1rem; border-radius: 2rem" alt="">
+                                        <div class="content">
+                                            <h4>{{ $s->nama_siswa }}</h4>
+                                            <div class="info" style="margin-bottom: 20px;">
+                                                <p>Kelas <br> <span>{{ $s->kelas }}</span></p>
+                                                <p> <br> <span><a href="{{ $s->sosmed }}" target="_blank"><i class="ri-instagram-line"></i></a></span></p>
+                                                {{-- <a href="game/DinoRun.html">Lihat</a> --}}
+                                            </div>
+                                            <div class="progress-line">
+                                                <span></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </section>
@@ -299,7 +302,7 @@
                         </li>
 
                         <li>
-                            <address class="footer__info">XII RPL 1 | XII RPL 2</address>
+                            <address class="footer__info" ><a href="" style="color: white">XII RPL 1</a> | <a href="" style="color: white">XII RPL 2</a></address>
                         </li>
                     </ul>
                 </div>
@@ -308,13 +311,19 @@
                     <h3 class="footer__title">Follow </h3>
 
                     <div class="footer__social">
-                        <a href="https://www.instagram.com/uneso.smecone?igsh=MXE1ZXI3ZzNnYmtiOA==" target="_blank">
+                        {{-- <a href="https://www.instagram.com/uneso.smecone?igsh=MXE1ZXI3ZzNnYmtiOA==" target="_blank">
                             @uneso
                         </a>
                         <a href="https://www.instagram.com/soneetwo?igsh=MWVseWlldmxtNnVlaQ==" target="_blank">
                             @soneetwo
+                        </a> --}}
+                        <a href="" target="_blank">
+                            <i class="ri-instagram-line"></i>
                         </a>
                         {{-- <a href="" target="_blank">
+                            <i class="ri-threads-line"></i>
+                        </a>
+                        <a href="" target="_blank">
                             <i class="ri-threads-line"></i>
                         </a> --}}
                     </div>
