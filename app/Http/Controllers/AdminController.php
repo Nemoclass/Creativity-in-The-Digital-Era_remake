@@ -6,6 +6,7 @@ use App\Models\Game;
 use App\Models\Team;
 use App\Models\Siswa;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
@@ -19,7 +20,11 @@ class AdminController extends Controller
 // TEAM
     public function store__team(Request $request){
         Team::create($request->all());
-        return back();
+         $notif = array(
+            'message' => 'Data team berhasil ditambahkan',
+            'alert' => 'success'
+        );
+        return back()->with($notif);
     }
 
 
@@ -49,7 +54,11 @@ class AdminController extends Controller
             'team_id' => $request->team_id,
 
         ]);
-        return back();
+         $notif = array(
+            'message' => 'Data game berhasil ditambahkan !',
+            'alert' => 'success'
+        );
+        return back()->with($notif);
     }
 
     public function destroy__game($id){
@@ -57,8 +66,11 @@ class AdminController extends Controller
         if($game->logo_icon){
                 Storage::disk('public')->delete($game->logo_icon);
          }
-
-         return back();
+        $notif = array(
+            'message' => 'Data game berhasil dihapus !',
+            'alert' => 'success'
+        );
+         return back()->with($notif);
     }
     
 // SISWA
@@ -72,7 +84,11 @@ class AdminController extends Controller
             'sosmed' => $request->sosmed,
             'team_id' => $request->team_id,
         ]);
-        return back();
+         $notif = array(
+            'message' => 'Siswa berhasil ditambahkan !',
+            'alert' => 'success'
+        );
+        return back()->with($notif);
     }
 
     public function edit__siswa($id){
@@ -112,7 +128,11 @@ class AdminController extends Controller
         if($siswa->foto_siswa){
                 Storage::disk('public')->delete($siswa->foto_siswa);
          }
-
-         return back();
+        $siswa->delete();
+         $notif = array(
+            'message' => 'Data siswa berhasil dihapus !',
+            'alert' => 'success'
+        );
+         return back()->with($notif);
     }
 }

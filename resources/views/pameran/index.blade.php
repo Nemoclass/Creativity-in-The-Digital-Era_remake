@@ -214,7 +214,7 @@
             <h2 class="section__title">RPL 1</h2>
             <div class="swiper siswa-Swiper">
                 <div class="swiper-wrapper">
-                    @foreach ($siswa as $s)
+                    @foreach ($fotoUneso as $s)
                         <div class="container games swiper-slide">
                             <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
                                 <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">
@@ -242,7 +242,7 @@
             <h2 class="section__title">RPL 2</h2>
             <div class="swiper siswa-Swiper">
                 <div class="swiper-wrapper">
-                    @foreach ($siswa as $s)
+                    @foreach ($fotoSone as $s)
                         <div class="container games swiper-slide">
                             <div class="cardBx row justify-content-center col-xl-12 col-12 col-md-12 col-sm-12 mt-5 gap-2 mx-auto">
                                 <div class="row justify-content-center col-xl-3 col-12 col-sm-6 col-md-6">

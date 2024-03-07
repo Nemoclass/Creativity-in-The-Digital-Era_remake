@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin RPL Exhibition</title>
     <link rel="stylesheet" href="{{ asset('admin/bootstrap.min.css') }}">
+	  <link rel="stylesheet" href="{{ asset('css/toastr.min.css') }}">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -34,6 +35,8 @@
         <button class="btn btn-primary" onclick="tampilFormGame()"><a class="nav-link disabled" href="">Tambah game +</a></button>
         <button class="btn btn-info" onclick="tampilFormSiswa()"><a class="nav-link disabled" href="">Tambah siswa +</a></button>
         <button class="btn btn-warning" onclick="tampilFormTeam()"><a class="nav-link disabled" href="">Tambah team +</a></button>
+       
+        {{-- GAME --}}
         <div class="row mt-3 d-none" id="form-game">
             <h3 class="border-bottom pb-2">Tambah Data Game</h3>
             <div class="row mx-auto">
@@ -139,14 +142,14 @@
                       <td>{{ $g->team->nama_team }}</td>
                       <td><img src="{{ asset('storage/'.$g->ss1) }}" alt="" srcset="" width="200px"></td>
                       <td style="max-width: 180px">{{ $g->desc }}</td>
-                      <td>
-                        <a href="{{ route('admin-edit-game', ['id' => $g->id]) }}">Edit</a>
-                      </td>
                     </tr>
                   @endforeach
                 </tbody>
               </table>
         </div>
+
+
+        {{-- SISWA --}}
         <div class="row mt-3 d-none" id="form-siswa">
           <h3 class="border-bottom pb-2">Tambah Data Siswa</h3>
           <div class="row col-lg-12 mx-auto">
@@ -211,7 +214,7 @@
                       <td><img src="{{ asset('storage/'.$s->foto_siswa) }}" alt="" srcset="" width="120px"></td>
                       <td style="max-width: 180px">{{ $s->team->nama_team }}</td>
                       <td>
-                        <a href="" class="badge badge-warning">Edit</a>
+                        <a href="{{ route('admin-destroy-siswa', ['id' => $s->id]) }}">Hapus</a>
                       </td>
                     </tr>
                   @endforeach
@@ -219,6 +222,9 @@
               </table>
           </div>
         </div>
+
+
+        {{-- TEAM --}}
         <div class="row mt-3 d-none" id="form-team">
           <h3 class="border-bottom pb-2">Tambah Data Team</h3>
           <div class="row col-lg-12 mx-auto">
@@ -235,6 +241,9 @@
     </div>
     <script src="{{ asset('admin/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('admin/jquery3.4.6.js') }}"></script>
+	<script src="{{ asset('assets_login/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('javascript/toastr.min.js') }}"></script>
+
     <script>
       const game = document.getElementById("form-game")
       const siswa = document.getElementById("form-siswa")
@@ -273,6 +282,29 @@
             });
         });
     </script>
+    <script>
+		  toastr.options = {
+  "closeButton": true,
+  "debug": false,
+  "newestOnTop": false,
+  "progressBar": true,
+  "positionClass": "toast-top-right",
+  "preventDuplicates": false,
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
+		@if (Session::has('message'))
+			toastr.{{ Session::get('alert') }}("{{ Session::get('message') }}")
+		@endif
+    
+		</script>
   </body>
 </html>
 

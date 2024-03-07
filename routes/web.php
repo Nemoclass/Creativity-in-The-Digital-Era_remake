@@ -42,8 +42,8 @@ Route::middleware(['auth',])->group(function () {
             Route::post('/store-game', [AdminController::class, 'store__game'])->name('admin-store-game');
             Route::post('/store-team', [AdminController::class, 'store__team'])->name('admin-store-team');
             Route::post('/store-siswa', [AdminController::class, 'store__siswa'])->name('admin-store-siswa');
-            Route::get('/edit-game/{id}', [AdminController::class, 'edit__game'])->name('admin-edit-game');
-            Route::post('/update-game', [AdminController::class, 'update__game'])->name('admin-update-game');
+            Route::get('/destroy-game/{id}', [AdminController::class, 'destroy__game'])->name('admin-destroy-game');
+            Route::get('/destroy-siswa/{id}', [AdminController::class, 'destroy__siswa'])->name('admin-destroy-siswa');
         });
     });
 
