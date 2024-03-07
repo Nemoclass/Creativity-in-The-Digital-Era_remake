@@ -100,7 +100,7 @@
 
             <div class="new__container container">
                 <!-- Swiper -->
-                <div class="swiper new-Swiper">
+                <div class="swiper new-Swiper {{ $game->orientation === "Potrait" ? 'potrait' : '' }}">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <video src="{{ asset('storage/'.$game->video_demo) }}" autoplay controls width="100%" height="auto"></video>
@@ -121,6 +121,8 @@
                             <img src="{{ asset('storage/'.$game->ss5) }}" alt="">
                         </div>
                     </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                     {{-- <div class="swiper-pagination"></div> --}}
                 </div>
             </div>
