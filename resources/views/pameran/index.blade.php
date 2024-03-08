@@ -97,7 +97,7 @@
                 <footer class="home__footer">
                     <div class="home__location">
                         <i class="ri-map-pin-line"></i>
-                        <a href="https://maps.app.goo.gl/qZKx28KnRRQvvkqv5" style="text-decoration: none; color:white">SMK N 1 Purwokerto</a >
+                        <a href="https://maps.app.goo.gl/qZKx28KnRRQvvkqv5" target="_blank" style="text-decoration: none; color:white">SMK N 1 Purwokerto</a >
                     </div>
 
                     <div class="home__social">

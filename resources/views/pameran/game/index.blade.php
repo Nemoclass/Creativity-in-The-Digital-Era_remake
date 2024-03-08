@@ -78,18 +78,17 @@
                     <p class="home__description">{{ $game->desc }}</p>
 
                     <div class="home__buttons">
-                        <a href="" class="button">Download Now</a>
+                        <a href="{{ $game->link }}" class="button">Download Now</a>
                         <form action="{{ route('like', ['id' => $game->id]) }}" method="POST">
-                    @csrf
-                    <button type="submit" class="button button--link button--flex">
-                        @auth
-                            {{ Auth::user()->hasLiked($game) ? 'Dislike' : 'Like' }}
-                        @else
-                            Like
-                        @endauth
-                    </button>
-                </form>
-
+                            @csrf
+                            <button type="submit" class="button button--link button--flex">
+                                @auth
+                                    {{ Auth::user()->hasLiked($game) ? 'Dislike' : 'Like' }}
+                                @else
+                                    Like
+                                @endauth
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>

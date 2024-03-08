@@ -111,11 +111,15 @@
                         @endforeach
                   </select>
                 </div>
-                <select class="form-select" aria-label="Default select example" name="orientation">
+                <select class="form-select mb-3" aria-label="Default select example" name="orientation">
                   <option selected>Pilih Oritentasi</option>
                   <option value="Potrait">Potrait</option>
                   <option value="Landscape">Landscape</option>
                 </select>
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="ss4">Link game</label>
+                    <input type="text" name="link" class="form-control" id="ss4">
+                </div>
                     </div>
                     <button class="btn btn-success d-block ms-auto">Kirim</button>
                 </form>
@@ -142,6 +146,7 @@
                       <td>{{ $g->team->nama_team }}</td>
                       <td><img src="{{ asset('storage/'.$g->ss1) }}" alt="" srcset="" width="200px"></td>
                       <td style="max-width: 180px">{{ $g->desc }}</td>
+                      <td><a href="{{ route('admin-destroy-game', ['id'=>$g->id]) }}">Hapus</a></td>
                     </tr>
                   @endforeach
                 </tbody>

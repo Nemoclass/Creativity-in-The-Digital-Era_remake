@@ -20,6 +20,7 @@ class CreateGamesTable extends Migration
             $table->string('video_demo');
             $table->string('logo_text');
             $table->string('orientation');
+            $table->string('link');
             $table->text('desc');
             $table->string('ss1');
             $table->string('ss2');

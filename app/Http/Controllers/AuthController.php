@@ -55,6 +55,6 @@ class AuthController extends Controller
     }
     public function email__resend(Request $request){
         $request->user()->sendEmailVerificationNotification();
-        return back()->with('success', 'Verification link sent!');
+        return view('Auth.verify-email-success')->with('success', 'Verification link sent!');
     }
 }

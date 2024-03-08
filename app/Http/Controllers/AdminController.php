@@ -51,6 +51,7 @@ class AdminController extends Controller
             'ss3' => $pathSs3,
             'ss4' => $pathSs4,
             'ss5' => $pathSs5,
+            'link' => $request->link,
             'team_id' => $request->team_id,
 
         ]);
@@ -65,7 +66,15 @@ class AdminController extends Controller
         $game = Game::find($id);
         if($game->logo_icon){
                 Storage::disk('public')->delete($game->logo_icon);
+                Storage::disk('public')->delete($game->video_demo);
+                Storage::disk('public')->delete($game->logo_text);
+                Storage::disk('public')->delete($game->ss1);
+                Storage::disk('public')->delete($game->ss2);
+                Storage::disk('public')->delete($game->ss3);
+                Storage::disk('public')->delete($game->ss4);
+                Storage::disk('public')->delete($game->ss5);
          }
+         $game->delete();
         $notif = array(
             'message' => 'Data game berhasil dihapus !',
             'alert' => 'success'
