@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Login Nemoclass</title>
+  	<title>Login RPL Exhibition</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
@@ -72,7 +72,7 @@
 		// 	toastr.{{ Session::get('alert') }}("{{ Session::get('message') }}")
 		// @endif
     toastr.success("My name is Inigo Montoya. You killed my father. Prepare to die!")
-		
+
 		</script>
 	</body>
 </html>

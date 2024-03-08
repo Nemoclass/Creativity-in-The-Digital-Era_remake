@@ -97,7 +97,7 @@
                 <footer class="home__footer">
                     <div class="home__location">
                         <i class="ri-map-pin-line"></i>
-                        <span>SMK N 1 Purwokerto</span>
+                        <a href="https://maps.app.goo.gl/qZKx28KnRRQvvkqv5" style="text-decoration: none; color:white">SMK N 1 Purwokerto</a >
                     </div>
 
                     <div class="home__social">
@@ -164,7 +164,7 @@
                     <img src="{{ asset('img/background/console2.png') }}" alt="image" class="about__poster">
                 </div>
 
-                <img src="{{ asset('img/content/gameposter.jpg') }}" alt="image" class="about__img">
+                <img src="{{ asset('img/content/gameposter.png') }}" alt="image" class="about__img">
             </div>
         </section>
 
@@ -282,7 +282,7 @@
                 <div>
                     <h3 class="footer__title">Development by</h3>
 
-                    <ul class="footer__list">
+                    <ul class="footer__list" style="cursor: pointer">
                         <li>
                             <address class="footer__info">Rizqy Bagus Saputra</address>
                         </li>
@@ -298,7 +298,7 @@
 
                     <ul class="footer__list">
                         <li>
-                            <address class="footer__info">rplexhibition@gmail.com</address>
+                            <address class="footer__info" style="cursor: pointer">rplexhibition@gmail.com</address>
                         </li>
 
                         <li>
